@@ -1,0 +1,118 @@
+body {
+	box-sizing:content-box;
+	font-family: sans-serif;
+	color: black;
+	background:rgba(219, 77, 255, 0.50);
+}
+
+.page-head {
+	display: flex;
+	margin-top: 0;
+	margin-left: 300px;
+	align-items: center;
+
+}
+
+.main-title {
+	font-family: sans-serif;
+	font-display: block;
+	font-size: 1.6em;
+	font-weight: 600;
+	margin-right: 250px;
+}
+nav ul {
+	list-style-type: none;
+	display: inline-flex;
+	width: 20em;
+	
+
+}
+
+nav li {
+	font-family: sans-serif;
+	font-display: block;
+	font-size: 1.4em;
+	font-weight: 500;
+	margin-right: 40px;
+
+}
+
+nav a {
+	font-family: sans-serif;
+	font-display: block;
+	text-decoration: none;
+	color: black;
+
+}
+
+nav a:hover, 
+nav a:focus {
+	background: bisque;
+	border:2px solid darkcyan;
+	width: 120px;
+	padding: 5px;
+	border-radius: 5px;
+
+}
+
+
+.page-logo {
+	border: none;
+	border-radius: 50%;
+	margin-left: 300px;
+	margin-top: 70px;
+	outline: 4px solid cyan;
+	outline-offset: 5px;
+
+
+
+	
+	}
+
+.main-text {
+	text-align: center;
+	font-family: sans-serif;
+	color: black;
+	line-height: 1;
+	margin-top: 50px;
+	margin-left: 20px;
+
+	}
+
+	#first-text {
+		margin-right:600px;
+		text-transform: uppercase;
+		font-size: 1.5em;
+		font-display: block;
+		color: cyan;
+		padding-left: 50px;
+	}
+
+	#second-text {
+		
+		margin-right:460px;
+		text-transform: capitalize;
+		font-size: 3em;
+		color:grey;
+		padding-left: 50px;
+	
+	}
+
+	.third-text {
+		line-height: 1.5;
+		word-spacing: 1.5;
+		font-family: sans-serif;
+		font-size: 1.3em;
+		margin-left: 200px;
+		margin-right: 200px;
+		margin-top: -5px;
+		font-display: block;
+		font-weight: 600;
+		padding-left: 50px;
+		padding-right: 55px;
+		color: rgba(0, 0, 0, 0.70);
+
+		
+		
+}
+

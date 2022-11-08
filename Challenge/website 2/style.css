@@ -1,0 +1,247 @@
+:root 
+{
+
+}
+
+*,
+*::before,
+*::after
+{
+    box-sizing: border-box;
+}
+
+section 
+{
+    padding: 7em 0;
+}
+body 
+{
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.6;
+
+}
+
+img 
+{
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+p 
+{
+    margin: 0;
+}
+
+.container
+{
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+}
+
+.hero
+{
+    color: white;
+    text-align: center;
+    padding: 15em 0;
+     background: url(./image/shoe-3.png), 
+     radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.primary-title
+{
+    font-size: 4rem;
+    font-size: clamp(3rem, 5vw + 1rem, 4rem);
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+.btn 
+{
+    display: inline-block;
+    text-decoration: none;
+    padding: .5em 1.25em;
+    background: var(--clr-accent, blue);
+    color: var(--clr-text, white);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125em;
+    border-radius: .25em;
+    transition: transform 250ms ease-in-out,
+                opacity 250ms linear;
+}
+
+.btn:hover,
+.btn:focus
+{
+    transform: scale(1.1);
+    opacity: .5;
+}
+.featured 
+{
+    background: #eee;
+}
+
+.section-title
+{
+text-align: center;
+font-size: clamp(2.5rem, 5vw +1rem);
+line-height: 1;
+color: #17353d;
+margin-bottom: 5rem;
+}
+
+.split 
+{
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.split > * 
+{
+    flex-basis: 30%;
+    min-width: 15em;
+}
+
+.spacing > * + * {
+    margin-top:var(--spacer, 2rem) ;
+}
+
+.featured-item
+{
+    display: block;
+    position: relative;
+    transform: scale(.85);
+   transition: transform 250ms ease-in-out;
+   text-decoration: none;
+   text-align: center;
+   color: #333;
+   line-height: 1.2;
+}
+
+.featured-item span 
+{
+   display: block; 
+   font-size:2.5rem;
+   font-weight: 700;
+}
+
+.featured-item:hover,
+.featured-item:focus
+{
+    transform: scale(1);
+   
+}
+
+.featured-item::after 
+{
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    padding: 75% 75% 0 0;
+    border-radius: 50%;
+    background: #2193b0;
+    z-index: -1;
+
+}
+
+.featured-details
+{
+    opacity: 0;
+    transition: opacity 250ms linear;
+}
+.featured-item:hover .featured-details,
+.featured-item:focus .featured-details
+{
+    opacity: 1;
+    text-shadow: 0 0 .25rem rgba(#fff, 1);
+}
+
+.product
+{
+    background: radial-gradient(
+       var(--clr-inner, limegreen), var(--clr-outer, purple)
+    );
+    padding: 3em;
+    border-radius: 3em;
+    margin-bottom:3em;
+    text-align: center;
+}
+
+.product-title
+{
+    font-size:clamp(3.5em, 5vw + 1em, 5.5em) ;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1;
+    text-shadow: 0 0 .2em rgba(#000, .2);
+}
+
+.shoe-red
+{
+    --clr-inner: #faa700;
+    --clr-outer:#e48d00;
+    --clr-accent:#a1173c;
+}
+
+.shoe-white
+{
+    --clr-inner: #fce4b3;
+    --clr-outer:#eac886;
+    --clr-accent:#2f4858;
+}
+
+.shoe-blue
+{
+    --clr-inner: #6dd5ed;
+    --clr-outer:#2193b0;
+    --clr-accent:#008951;
+}
+
+.hero 
+{
+    --clr-accent: #faa700;
+}
+
+
+.product  .product-image
+{
+    margin: -5em 0 0 0;
+}
+
+@media screen and (min-width:45em)
+
+{
+    .product{
+        text-align:left;
+    }
+    .product-image  {
+        float: right;
+        width: 65%;
+        shape-outside:url(./image/shoe-1.png);
+        shape-margin: 1em;
+    }
+    .product-title 
+    {
+        margin: 0;
+    }
+
+    .product.shoe-white .product-image
+    {
+        float: left;
+        shape-outside: url(./image/shoe-2.png);
+        margin: 0 0 0 -5em;
+        shape-margin: 2em;
+    }
+}

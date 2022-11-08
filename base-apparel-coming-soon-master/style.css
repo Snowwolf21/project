@@ -1,0 +1,240 @@
+*
+{
+    margin: 0;
+    padding: 0;;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    
+}
+.wrapper
+    {
+      
+      width:375px;
+      height: 100vh;
+      background: linear-gradient(135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%));
+      
+      
+    }
+
+    header 
+    {
+        margin-top: 10px;
+       padding:5px 8px;
+    }
+.logo 
+    {
+       
+       width: 120px;
+       height: 50px;
+       
+    }
+
+.logo img 
+    {
+        width: 100%;
+        padding:  1em;
+      
+    }
+.hero
+    {
+        width: 100%;
+       
+    }
+
+ .hero .hero-box
+        {
+            width: 100%;
+            height:15em;
+            background: url(./images/hero-mobile.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-bottom: 10px;
+        }
+
+.container
+                {
+                   width: 100%;
+                  margin-top: 30px;
+                
+                }
+.container .primary-title
+                {
+                    width: 100%;
+                    font-size: 3.5rem;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    letter-spacing: 10px;
+                   
+            }
+.sub-title 
+            {
+                display: block;
+                text-align: center;
+               
+            }
+.color
+            {
+                color:hsl(0, 36%, 70%);
+                font-weight: 100;
+            }
+.primary-text 
+            {
+                
+                margin-top: 15px;
+                line-height: 1.5;
+                text-align: center;
+                font-size: 1.1rem;
+                font-weight: 500;
+                color:hsl(0, 36%, 70%) ;
+            }
+.input 
+            {
+                width: 100%;
+                margin-top: 10px;
+                position: relative;
+                display: flex;
+                justify-content: space-between;
+            }
+input[type="email"]
+            {
+                width: 100%;
+                margin: 10px;
+                padding: 15px 10px;
+                font-size: 1.2em;
+                font-weight: 600;
+                letter-spacing: 1px;
+                border:1px solid #333;
+                border-radius: 20px;
+                outline: none;
+            }
+input[type="email"]:hover
+            {
+               border:3px solid  hsl(0, 93%, 68%);
+            }
+
+
+.btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 10px;
+    right: 8px;
+}
+
+.btn img    
+    {   
+        display: inline-block;
+        padding: .5em;
+    
+    }
+#input-btn
+    {
+       margin-left: 15px; 
+       padding:10px 40px;
+       background:  hsl(0, 93%, 68%);
+       outline: none;
+       border:none;
+       border-radius: 25px;
+    }
+
+#error-img 
+    {
+        width: 40px;
+        height: 40px;
+        visibility:hidden;
+    }
+
+@media screen and (min-width:800px) {
+body
+    {
+        display: flex;
+        justify-content: center;
+    }
+    .wrapper
+    {
+       width: 80%;
+       padding: 40px 70px;
+       display: grid;
+       grid-template-columns: repeat(5, 1fr);
+       grid-template-rows: repeat(5, 1fr);
+       /* grid-gap: 10px; */
+       grid-template-areas: 
+       "header header hero hero hero"
+       "text text hero hero hero"
+       "text text hero hero hero"
+       "text text hero hero hero"
+       "input input hero hero hero"
+       ;
+    }
+    header 
+        {
+            padding: 10px 0;
+            grid-area: header;
+        }
+    .logo 
+        {
+            width: 200px;
+            height: 100px;
+        }
+    .hero 
+            {
+                grid-area: hero;
+                height: 100%;
+            }
+    .hero .hero-box 
+            {
+                height:100%;
+                background: url(./images/hero-desktop.jpg);
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+            }
+
+    .container {
+        width: 30vw;
+       
+   
+    }
+    .container .primary-title
+        {
+          font-size: 4em;
+          letter-spacing: 15px;
+          
+        }
+    .primary-text 
+        {
+            width: 100%;
+            font-size: 1.25em;
+            margin-top: 30px;
+            margin-bottom: 0;
+            line-height: 1.6;
+            text-align: left;
+        }
+        .sub-title
+            {
+                text-align: left;
+            }
+
+    .input
+        {
+            grid-area: input;
+            place-items: center;  
+              
+        }
+    input[type="email"]
+        {
+            width: 70%;
+            padding: 15px 8px ;
+            margin-top: -250px;
+        }
+    .btn 
+        {
+            top: -123px;
+            right: 170px;
+        }
+}
+ 
+   

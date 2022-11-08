@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)http://127.0.0.1:5500/portfolio/Portfolio.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Document</title>
+<link href="./Document_files/css2" rel="stylesheet"><link rel="stylesheet" href="./Document_files/style.css"></head>
+<body>
+	<header>
+			<div class="logo-box">
+				<div class="img-Bx">
+					<img src="./Document_files/logo-5.png" class="logo-img" alt="">
+				</div>
+				<h2 class="logo-title">SnowCode</h2>
+			</div>
+			
+			<ul class="navigation">
+				<li><a href="http://127.0.0.1:5500/portfolio/Portfolio.html">Home</a></li>
+				<li><a href="http://127.0.0.1:5500/portfolio/Portfolio.html">About</a></li>
+				<li><a href="http://127.0.0.1:5500/portfolio/Portfolio.html">Services</a></li>
+				<li><a href="http://127.0.0.1:5500/portfolio/Portfolio.html">Skills</a></li>
+				<li><a href="http://127.0.0.1:5500/portfolio/Portfolio.html">Hire me!</a></li>
+			</ul>
+		
+	</header>
+
+	<main>
+		<section class="primary">
+		<div class="container">
+			<h2 class="primary-title">Hi there, <span>I'm Akinkunmi</span></h2>
+			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Hic excepturi illo iste, ipsam itaque sapiente natus quod reiciendis, quaerat eum, ducimus doloremque totam in ipsum! Earum perferendis a officiis, ipsum magni voluptate ipsam recusandae maxime sequi sint. Corrupti ab rerum quisquam. Saepe ex tempore ullam!</p>
+			
+		</div>
+		</section>
+		<section class="about-us">
+			<h2 class="section-title">About Us</h2>
+			<div class="box">
+				<div class="row-50">
+					
+				<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut ut iusto exercitationem aspernatur a porro vitae quae eaque, cum, dolores ullam architecto? Facere ex esse natus reprehenderit illo aspernatur mollitia!</p>
+				
+				</div>
+				<div class="row-50">
+				<div class="img-Box">
+					<img src="./Document_files/software-developer.jpg" alt="">
+				</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="our-service">
+			<h2 class="section-title">Our Services</h2>
+			<div class="service-box">
+				<article class="service">
+					<div class="img-Bx">
+						<img src="./Document_files/laptop.svg" alt="">
+					</div>
+					<h3 class="service-title">Web Development</h3>
+					<p class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis labore nostrum eum vel necessitatibus. Harum, voluptate quo quisquam quidem vel provident tempore laudantium distinctio, architecto quam, sint non? Repellat, molestiae!</p>
+				</article>
+				<article class="service">
+					<div class="img-Bx">
+						<img src="./Document_files/laptop-fill.svg" alt="">
+					</div>
+					<h3 class="service-title">Software Installation</h3>
+					<p class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis labore nostrum eum vel necessitatibus. Harum, voluptate quo quisquam quidem vel provident tempore laudantium distinctio, architecto quam, sint non? Repellat, molestiae!</p>
+				</article>
+
+				<article class="service">
+					<div class="img-Bx">
+						<img src="./Document_files/pen.svg" alt="">
+					</div>
+					<h3 class="service-title">Copy Writing</h3>
+					<p class="service-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis labore nostrum eum vel necessitatibus. Harum, voluptate quo quisquam quidem vel provident tempore laudantium distinctio, architecto quam, sint non? Repellat, molestiae!</p>
+				</article>
+			</div>
+		</section>
+	</main>
+
+
+	<script rc="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+	<script src="./Document_files/app.js.download"></script>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>

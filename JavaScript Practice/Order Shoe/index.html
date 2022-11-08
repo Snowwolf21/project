@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        .cont {
+             display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .pics img {
+            width: 200px;
+        }
+        button {
+            padding: 8px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            border-radius: 15px;
+            background: transparent;
+            margin-top: 20px;
+        }
+        #error {
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="cont">
+        <div class="pics">
+            <img src="./Eywv7IGWgAU-xiE.jpeg" alt="run-image" srcset="">
+        </div>
+        <p>Nike Shoe</p>
+        <button onclick="purchase()">Purchase - $149</button>
+        <p id="error"></p>
+    </div>
+
+
+    <div class="sum-calculator" style="text-align: center;">
+        <span id="num1-el" style="margin: 0 5px; border-bottom: 2px solid tomato;"></span>
+        <span id="num2-el"  style=" border-bottom: 2px solid tomato;"></span>
+        <br>
+        <button onclick="add()">Add</button>
+        <button onclick="subtract()">Subtract</button>
+        <button onclick="divide()">Divide</button>
+        <button onclick="multiply()">Multiply</button>
+        <br>
+        <span id="sum-el" style="margin-top: 10px; font-size: 2rem;">Sum:</span>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>

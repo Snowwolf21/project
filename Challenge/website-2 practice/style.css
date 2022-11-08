@@ -1,0 +1,112 @@
+*,
+*::after,
+*::before
+{
+    box-sizing: border-box;
+}
+
+body 
+{
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.6;
+
+}
+
+h1,
+h2,
+h3,
+p
+{
+    margin: 0;
+}
+
+section
+{
+    padding: 7em 0;
+}
+
+.container
+{
+    width: 85%;
+    max-width: 65em;
+    margin: 0 auto;
+}
+
+img
+{
+    display: block;
+    max-width: 100%;
+}
+
+.hero
+{
+    color: #fff;
+    text-align: center;
+    padding: 15em 0;
+    background: url(./image/shoe-3.png),
+    radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+ 
+}
+
+.primary-title
+{
+    font-size: clamp(3.5em, 5vw + 1em, 4em);
+    line-height: 1.4;
+    font-size: 700;
+    text-transform: uppercase;
+}
+
+.btn 
+{
+    display: inline-block;
+    padding:.5em 1.25em;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.125em;
+    background: blue;
+    margin: 2em 0;
+    transition: opacity 250ms ease-in-out;
+    
+}
+
+.btn:focus,
+.btn:hover
+{
+ opacity: .5;
+}
+
+.featured 
+{
+    background: #eee;
+}
+
+.section-title
+{
+    text-align: center;
+    font-size: clamp(2.5rem, 5vw + 1em);
+    line-height: 1;
+    margin-bottom: 5em;
+    font-weight: 600;
+
+}
+
+.split 
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+}
+
+.split > * 
+{
+    flex-basis: 30%;
+    min-width: 15em;
+}

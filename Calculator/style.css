@@ -1,0 +1,142 @@
+*,
+::after,
+::before
+        {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;   
+        }
+body 
+        {
+            font-size: 16px;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+.container
+        {
+            width: 45em;
+            height: 100vh;
+            background-color: antiquewhite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+.container .calculator-container
+                        {
+                            width: 80%;
+                            height: 400px;
+                            background-color: lightsalmon;
+                            border: 3px solid #333;
+                            border-radius: 10px;
+                            padding: 30px 50px;
+                           display: grid;
+                           grid-template-columns: repeat(4, 7em);
+                           grid-template-rows:repeat(6, 1fr);
+                           grid-gap: 10px;
+                           grid-template-areas: 
+                           "display display display display"
+                           "ac  pos-neg percent divide"
+                           "seven eight nine multiplication"
+                           "four five six minus"
+                           "one two three plus"
+                           "zero zero decimal equal"
+                           ;
+                           place-content: center;
+                            
+                        }
+         .calc-display
+                            {
+                                grid-area: display;
+                                display: flex;
+                                justify-content: flex-end;
+                                align-items: center;
+                                font-size: 2.5em;
+                                font-weight: 400;
+                                border: 3px solid #9569A1;
+                                padding: 10px 15px;
+                                background-color: aliceblue;
+                            }
+
+    button 
+        {
+            border:none;
+            outline: 2.5px solid #333;
+            background-color:rgba(136, 240, 91, 0.63) ;
+            border-radius:30px;
+            padding: 10px 15px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 600;
+            
+        }
+        .clear
+                {
+                    grid-area: ac;
+                }
+        .plus-minus
+                {
+                    grid-area: pos-neg;
+                } 
+    .percentage
+                {
+                    grid-area: percent;
+                }  
+    .divide
+            {
+                grid-area: divide;
+            }   
+    .multiply
+                {
+                    grid-area:multiplication ;
+                }
+    .subtract
+            {
+                grid-area: minus;
+            }
+    .add
+            {
+                grid-area: plus;
+            }
+    .decimal
+                {
+                    grid-area: decimal;
+                }
+    .calculate
+            {
+                grid-area: equal;
+            }
+    .zero
+            {
+                grid-area: zero;
+                
+            }
+.one
+            {
+                grid-area:one;
+            }
+.two
+            {
+                grid-area: two;
+            }
+ .three
+            {
+                grid-area:three;
+            }
+.four
+            {
+                grid-area:four;
+            }
+.five
+            {
+                grid-area:five;
+            }
+.six
+            {
+                grid-area: six;
+            }
+.seven    
+            {
+                grid-area: seven;
+            }

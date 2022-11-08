@@ -1,0 +1,167 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+  }
+  
+  body {
+    max-width:100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    background-image: url(./image/IMG-20200515-WA0001.jpg);
+    background-color: #ddda7cc8;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+   
+  }
+  .container {
+    background-color: #d6d4a0c8;
+    width: 90%;
+    margin: 1em auto;
+    padding: 1em;
+    border-radius: 10px;
+  }
+  
+  header {
+    width:100%;
+    height:100px;
+    margin:auto auto;
+    text-align:center;
+    border:3px solid #23c9ff;
+  }
+  
+  header > h1 {
+    font-size:1.8em;
+    color:rgba(45, 45, 44, 0.816);
+    letter-spacing:2px;
+    line-height:1.5;
+    
+  }
+  
+  header > p {
+    font-size:1em;
+    font-weight:600;
+    letter-spacing:1px;
+  }
+  
+  main.about-info {
+    width:80vw;
+    margin: 1.5em auto;
+  }
+  
+  h2 {
+    font-size:1.2em;
+    font-weight:600;
+    margin: 0.5em 0;
+    border-bottom:3px solid #23c9ff;
+    color:grey;
+    padding:5px;
+  }
+  
+  .objective p {
+    font-size:1.2em;
+    font-weight:500;
+    line-height:1.5;
+    
+  }
+
+  
+  span {
+    float:right;
+    font-weight: 600;
+    font-size:1em;
+  }
+
+
+ ul {
+    margin: 0.8em 0;
+    padding:0.5em;
+    line-height:1.5;
+ }
+
+ ul > li {
+    font-weight:700;
+    font-size:1.2em;
+ }
+
+
+ul > p {
+    font-size: 1.1em;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.skills ul > li {
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+#image-caption {
+    font-size: 1.5em;
+    font-weight: 600;
+   background-color: #23c9ff;
+   border-radius: 15px;
+    padding: 0.5em;
+    margin: 0.5em;
+
+}
+
+#image-hero {
+ 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:center ;
+}
+
+#image-hero > img {
+    height: 200px;
+    width: 200px;
+}
+
+footer {
+    width: 90%;
+    height: 100px;
+   margin: 0 auto;
+   padding: 1em;
+   background: rgb(61, 58, 58);
+   color: beige;
+}
+
+footer > ul {
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+footer > ul > li {
+    margin:0  10px;
+    list-style-type: none;
+}
+
+footer > ul > li > a {
+    text-decoration: none;
+    background: rgba(15, 209, 209, 0.853);
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    color: beige;
+    transition: all 300ms ease-in-out 300ms;
+    
+}
+
+
+a:hover {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid gold;
+    border-radius: 10px;
+    background: rgba(15, 209, 209, 0.453);
+    b
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript tutorial</title>
+    <style>
+        body {
+            /* text-align: center; */
+            background: rgb(168, 99, 122);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 500;
+            color: rgb(255, 157, 0);
+        }
+
+        p {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: rgb(56, 58, 58);
+        }
+        button {
+            color: #016f32;
+            width: 150px;
+            background: goldenrod;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blackjack</h1>
+    <p id="message-el">Want to play a round?</p>
+    <p id="card-el">Cards:</p>
+    <p id="sum-el">Sum:</p>
+    <button id="startgame-btn" onclick="startGame()">Start Game</button>
+    <button id="newcard-el" onclick="newCard()">New Card</button>
+    <p id="player-el"> Kunmi: $180</p>
+    <script src="./card.js"></script>
+</body>
+</html>

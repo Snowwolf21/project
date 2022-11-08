@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+
+
+.container {
+    width: 100%;
+    height: 100%;
+    
+    background: rgba(154, 87, 183, 0.889);
+}

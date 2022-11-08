@@ -1,0 +1,148 @@
+body { 
+    margin:0 ;
+    box-sizing: border-box;
+    background:  hsla(216, 54%, 11%);
+    font-size: 18px;
+}
+.wrapper {
+        width: 24em;
+         height: 34em;  
+         background:hsl(217, 54%, 11%);
+        margin:  auto;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.container {
+    max-width: 80%;
+    height: 32em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+      background: hsl(216, 50%, 16%) ; 
+      border-radius: 10px ; 
+     /* background: hsl(215, 51%, 70%);  */
+
+    
+}
+
+.small-card {
+     margin:15px; 
+    padding:15px;  
+    display: flex;
+    justify-content: center;
+     flex-direction:column;
+} 
+
+
+ .home-hero img {
+    width: 100%;
+    margin: auto;
+    border-radius: 8px;
+    align-self: center;   
+}
+
+.container h3 {
+    letter-spacing: 1.5px;
+    word-spacing: 0.5px;
+    line-height: 1.2;
+    margin-bottom: -5px;
+    
+}
+
+.container h3 a {
+    text-decoration: none;
+    color:hsl(178, 100%, 50%);
+   
+  
+}
+
+ .container .main-text {
+    font-size: 16px;
+    /* letter-spacing:0.5px;
+    word-spacing: 0.5px; */
+    line-height: 1.4;
+    margin-bottom: -5px;
+    color: hsl(215, 51%, 70%);
+    font-size: 18px;
+
+} 
+
+ .container .cont {
+    display: flex;
+   
+    
+} 
+
+ .container .cont .ethereun {
+        flex: 1;
+        display:flex;
+        align-items: center;
+        color: hsl(178, 100%, 50%);
+}
+
+.container .cont .ethereun img {
+    margin-right:5px ;
+}
+
+.cont .ethereun p {
+    word-spacing: -3px;
+    
+}
+
+.container .time {
+        
+        display: flex;
+        align-items: center;
+    }
+.container .time img {
+    margin-right:4px ;
+}  
+
+.container .time  p {
+    word-spacing: -3px;
+    letter-spacing: 0.5px;
+    color: hsl(215, 51%, 70%);
+    
+
+} 
+
+
+.line {
+    width: 100%;
+    margin: 0 auto;
+    border-bottom:1px solid hsl(215, 32%, 27%);
+}
+
+.container .avatar {
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+
+}
+
+  .container .avatar img {
+            width: 40px;
+            height: 40px;
+            border: 1px solid wheat;
+            border-radius: 50%;
+            margin-right: 10px;
+         
+    } 
+
+    .container .avatar p {
+        word-spacing: 0.5px;
+        letter-spacing:0.5px;
+        line-height: 1.2;
+    }
+
+   .container .avatar p  a {
+       text-decoration: none;
+       color: ;
+       word-spacing: 0.5px;
+       
+   }

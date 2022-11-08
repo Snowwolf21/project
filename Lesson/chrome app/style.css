@@ -1,0 +1,154 @@
+/* p::before {
+    content:"hello ";
+    font-weight: bold;
+    font-size: 2rem;
+    color: red;
+    display: block;
+}
+
+p::after {
+    content:"";
+    display: block;
+    width: 50px;
+    height: 50px;
+    background: green;
+} */
+
+/* div {
+    width: 50vw;
+    margin: 100px auto;
+    border: 2px solid red;
+    position: relative;
+}
+img {
+    width: 100%;
+    display: block;
+}
+
+ div::before {
+    content: "";
+    border: 2px solid grey;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    top: -40px;
+    left: -40px;
+    z-index: -2;
+    background: cyan;
+    transition: all 0.5s ease-in-out;
+
+ }
+
+ div::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    top: -20px;
+    left: -20px;
+    z-index: -1;
+    background:gold;
+    transition: all 0.5s ease-in-out;
+ }
+
+ div:hover::after,
+ div:hover::before {
+    top: 0;
+    left: 0;
+ } */
+
+/* 
+div {
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+} */
+
+
+/* .transition {
+    background: red;
+    transition: all 2s linear;
+    border: 2px solid black;
+}
+
+.transition:hover {
+    background: yellow;
+    transform: translateX(100px);
+    border: 2px solid coral;
+} */
+
+/* .animation {
+    background: cyan; */
+    /* animation-name:lesson;
+    animation-duration: 10s;
+    animation-iteration-count:2; */
+    /* animation: lesson 10s infinite;
+    animation-fill-mode: forwards;
+} */
+
+
+
+/* @keyframes lesson {
+    0% {
+        transform: translateX(20px);
+    }
+    25% {
+        transform: translateY(40px);
+        background: coral;
+    }
+    50% {
+        transform: translateX(-20px);
+        background: cornflowerblue;
+    }
+    75% {
+        transform:skewY(-40px);
+        background: crimson;
+    }
+
+    100% {
+        transform: translate(0);
+        background: blue;
+    }
+} */
+
+
+body {
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    min-width: 400px;
+    text-align: center;
+
+}
+input {
+    width: 80%;
+    padding: 10px;
+    margin: 40px auto;
+    box-sizing: border-box;
+    display: block;
+}
+button {
+    text-align: center;
+    padding: 10px 15px;
+    margin: 0 10px;
+    background: rgba(128, 255, 0, 0.583);
+    font-weight: 600;
+    outline: none;
+    border: none;
+    font-size: 1.1em;
+    color: #111;
+   
+}
+
+#ul-el li 
+    {
+        list-style: none;
+        font-size: 1.5em;
+    }
+#ul-el li a {
+text-decoration: none;
+color: black;
+}

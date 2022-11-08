@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Chrome Extension</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        input {
+            width: 100%;
+            padding: 10px 10px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+        }
+        button {
+            background: #5f9341;
+            padding: 10px 20px;
+            color: cornsilk;
+            box-sizing: border-box;
+            border: none;
+            font-weight: bold;
+        }
+        /* #container {
+            width: 200px;
+            height: 200px;
+            background: violet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: wheat;
+        } */
+    </style>
+</head>
+<body>
+    <input type="text" id="input-el">
+    <button id="input-btn">SAVE INPUT</button>
+    <button id="save-tab">SAVE TAB</button>
+    <button id="delete-btn">DELETE ALL</button>
+
+    <ul id="ul-el">   </ul>
+
+    <div id="container"></div>
+    <script src="./chrome.js"></script>
+</body>
+</html>

@@ -1,0 +1,545 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+
+p
+{
+    font-size: 1em;
+    font-weight: 500;
+    color: #111;
+    line-height: 1.5;
+} 
+
+section 
+{
+    padding: 100px;
+}
+
+header
+{
+    position:fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 40px 100px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 40px 100px;   
+    z-index: 1000;
+}
+
+header.sticky 
+{
+    background-color: #fff;
+    padding: 40px 100px;
+
+}
+
+header .logo
+{
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+header.sticky .logo
+{
+    color: #111;
+}
+
+header .logo span
+{
+    color: #ff0157;
+  
+}
+
+header .navigation 
+{
+    position: relative;
+    display: flex;
+    
+}
+
+header .navigation li
+{
+    margin-left: 30px;
+    list-style: none;
+}
+
+header.sticky .navigation li a 
+{
+    color: #111;
+}
+
+header .navigation li a 
+{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+
+header .navigation li a:hover
+{
+    color: #ff0157;
+}
+
+.banner 
+{
+  
+    width: 100%;
+    min-height:100vh ;
+    background: url(./images/bg.jpg);
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+   
+    
+}
+
+.banner .content
+{
+   max-width: 900px;
+    text-align: center;
+}
+.banner .content h2
+{
+    font-size: 5em;
+    color: #fff;
+    font-weight: 700;
+}
+
+.banner .content p 
+{
+    color: #fff;
+    font-size: 1em;
+   
+}
+ .btn 
+ {
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    background: #ff0157;
+    padding: 10px 20px;
+    transition:0.5s;
+    letter-spacing: 2px;
+ }
+
+ .btn:hover
+ {
+    letter-spacing: 5px;
+ }
+
+
+ .row 
+ {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    
+ }
+
+ .row .col50
+ {
+    width: 48%;
+   height: 400px;
+  position: relative;
+ }
+
+ .row .col50 .img-Bx
+ {
+    position: relative;
+    width: 100%;
+    height: 100%;
+ }
+
+ .row .col50 .img-Bx img 
+ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+ .title
+ {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+ }
+
+ .titleText
+ {
+    font-size: 2em;
+    font-weight: 400;
+    text-align: center;
+    color: #111;
+ }
+
+ .titleText span
+ {
+    color: #ff0157;
+    font-weight: 700;
+    font-size: 3rem;
+ }
+
+
+ .title p 
+ {
+    color: #111;
+    text-align: center;
+
+ }
+
+ .menu .content 
+ {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+    margin-top: 40px;
+  
+ }
+ .menu .content .box 
+ {
+    width: 340px;
+    margin: 20px;
+    border: 15px solid #fff;
+    box-shadow: 0 15px 5px #fff;
+ }
+
+ .menu .box .img-Bx
+ {
+    width: 100%;
+    height: 300px;
+    position: relative;
+ }
+
+ .menu .box .img-Bx img 
+ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+.menu .title
+{
+    padding: 15px 0 5px;
+}
+
+.title h3
+{
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.expert .content
+{
+    display: flex;
+    justify-content: center;
+   flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.expert .content .box
+{
+    width: 280px;
+    margin: 10px;
+}
+.expert .content .img-Bx
+{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    /* border:15px solid #fff; */
+    
+    
+}
+
+.expert .content .img-Bx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+}
+.testimonials
+{
+    background: url(./images/bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.white h2,
+.white p
+{
+    color: #fff;
+    font-weight: 400;
+}
+.testimonials .content 
+{
+    display: flex;
+    justify-content: center;
+  flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    /* height: 500px; */
+}
+
+.testimonials .content .box
+{
+  width: 340px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  background: #fff;
+  padding: 40px;
+  margin: 20px;
+}
+
+.testimonials .content .box .img-Bx
+{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testimonials .img-Bx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+}
+
+.testimonials .content .box .title h3
+{
+    color: #ff0157;
+    font-size: 1em;
+    font-weight: 600;
+
+}
+.testimonials .content .box p
+{
+    font-style: italic;
+    font-size: 1em;
+}
+
+.contact
+{
+    background: url(./images/bg3.jpg);
+     background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contactForm
+{
+max-width: 500px;
+padding: 45px 50px;
+margin: 50px;
+background: #fff; 
+}
+
+.contactForm h3
+{
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+
+.contactForm .input-Bx
+{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.contactForm .input-Bx input,
+.contactForm .input-Bx textarea
+{
+    width: 100%;
+    outline: none;
+    padding:10px;
+    font-size: 1em;
+    font-weight: 300;
+    resize: none;
+    font-size: 16px;
+    resize: none;
+}
+
+.contactForm .input-Bx input[type="submit"]
+{
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    background: #ff0157;
+    padding: 10px 15px;
+    max-width: 100px;
+    font-size: 1em;
+   
+}
+
+.copyright
+{
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid grey;
+    
+}
+
+.copyright a 
+{
+    text-decoration: none;
+    color: #ff0157;
+    font-weight: 500;
+}
+
+
+@media screen and (max-width: 991px)
+{
+    header,
+    header.sticky
+    {
+        padding: 10px 20px;
+    }
+    header .navigation 
+    {
+        display: none;
+    }
+
+    header .navigation li
+    {
+        margin-left: 0;
+    } 
+
+    .menuToggle 
+    {
+        position: relative;
+        background: url(./images/menu.png);
+        background-repeat: no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+    }
+
+    .menuToggle.active
+    {
+        background: url(./images/close.png);
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: center;
+    }
+
+    header .navigation.active
+    {
+        width: 100%;
+        height: calc(100% - 68px);
+        background: #fff;
+        position:fixed;
+        top: 68px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    header .navigation li a 
+    {
+        font-size: 1.6em;
+        color: #111;
+    }
+
+    .banner .content h2
+    {
+        font-size: 3em;
+        color: #fff;
+    }
+
+    section 
+    {
+        padding: 20px;
+    }
+
+    .row 
+    {
+        flex-direction: column;
+    }
+    .row .col50
+    {
+        position: relative;
+        width: 100%;
+    }
+
+    .row .col50 .img-Bx
+    {
+        height: 300px;
+        margin-top: 20px;
+    }
+    .menu .content {
+        margin-top: 20px;
+      }
+      .menu .content .box {
+        margin: 10px;
+      }
+      .menu .content .box .imgBx {
+        height: 260px;
+      }
+      .title {
+        text-align: center;
+      }
+      .titleText {
+        font-size: 1.8em;
+        line-height: 1.5em;
+        margin-bottom: 15px;
+        font-weight: 300;
+      }
+
+      .testimonials .content .box {
+        margin: 10px;
+        padding: 20px;
+      }
+      .contactForm {
+        padding: 35px 40px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+}

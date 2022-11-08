@@ -1,0 +1,39 @@
+body 
+    {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-align: center;
+        font-family: sans-serif;
+        background: bisque;
+        color: grey;
+        font-weight: bold;
+    }
+
+    h1
+        {
+            color: goldenrod;
+        }
+
+p 
+        {
+            font-size: 1.6em;
+        }
+
+button 
+        {
+            margin: 1em;
+            padding: .5em;
+            text-align: center;
+            font-size: 1.5em;
+            border: none;
+            border-radius: 5px;
+            width: 150px;
+            background: lightsalmon;
+            color: grey;
+            font-weight: 700;
+        }
+#message-el 
+        {
+            font-style: italic
+        }

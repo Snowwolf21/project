@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="survey.css">
+</head>
+<body>
+    <div class="title-box">
+        <h1 id="title">Freecode Camp Survey Form</h1>
+        <h2 id="sub-title">Thank you for visiting Freecode Camp. Please complete this form.</h2>
+    </div>
+
+    <form>
+        <div class="info-content">
+            <label for="Name">Name:</label><br>
+            <input type="text" placeholder="Enter your name"><br>
+            <label for="email">Email:</label> <br>
+            <input type="email" placeholder="Enter your email"><br>
+            <label for="age">Age(Optional)</label><br>
+            <input type="age" placeholder="mm/dd/yyyy">
+        </div>
+        <div class="skill-content">
+            <select>
+                <option name="Select Skill to enrole">Select Skill to Enrole</option>
+                <option value="Web Design">Web Design</option>
+                <option value="Web Development">Web Development</option>
+                <option value="Software Developer">Software Developer</option>
+                <option value="Cyber Securities">Cyber Securities</option>
+                <option value="Mobile App Development">Mobile App Development</option>
+                <option value="Data Scientist">Data Scientist</option>
+            </select>
+        </div>
+
+        <div class="access-box">
+            <div class="computer_access-content">
+            <label for="Do you have access to Computer?">Do you have access to Computer?</label> <br>
+            <input type="radio" value="Yes" name="Answer"><label for="Yes">Yes</label> <br>     
+            <input type="radio" value="No" name="Answer"><label for="No">No</label>
+        </div>
+
+            <div class="internet_access-content">
+                <label for="Do you have access to Computer?">Do you have access to Internet?</label> <br>
+                <input type="radio" value="Yes" name="Answer"><label for="Yes">I have access to internet</label><br>
+                <input type="radio" value="No" name="Answer"><label for="No">I don't have access to internet</label>
+            </div>
+
+        </div>
+
+       
+
+        
+            <div class="select-area"> 
+                 <select>
+                        <option value="Select current position">Select current Position</option>
+                        <option value="Undergraduate">Undergraduate</option>
+                        <option value="Graduate">Graduate</option>
+                        <option value="Unemployed">Unemployed</option>
+                        <option value="Full Time Job">Full Time Employed</option>
+                        <option value="Part Time Job">Part Time Employed</option>
+                            
+                    </select>
+            </div>
+         <div class="select-area">
+                    <select>
+                            <option name="Select Role of enrolment">Select Role of enrolment</option>
+                            <option value="Front End Development">Front End Development</option>
+                            <option value="Back End Development">Back End Development</option>
+                            <option value="Full Stack Development">Full Stack Development</option>
+                  </select>
+             </div>
+
+         <div class="select-area">
+                    <select>
+                        <option name=" Select education background">Select education background</option>
+                        <option value="High School">High School</option>
+                        <option value="College">College degree</option>
+                        <option value="">University degree</option>
+                        <option value="">Msc</option>
+                        <option value="">Phd</option>
+                    </select>
+         </div>
+   
+
+       
+                <div class="select-checkbox">
+
+                    <label for="Select Confortable tools" class="big-text">Select Comfortable Tools</label><br>
+                    <input type="checkbox"><label for="Sublime Text">Sublime Text</label><br>
+                    <input type="checkbox"><label for="VS Code">Visual Studio Code</label><br>
+                    <input type="checkbox"><label for="JSbin">JSbin</label><br>
+                    <input type="checkbox"><label for="Notepad++">Notepad++</label><br>
+                    <input type="checkbox"><Label>others</Label>
+                 </div>
+
+
+             <div class="select-checkbox">
+                 <label for="Select Courses to learn" class="big-text">Select Courses to learn</label><br>
+                 <input type="checkbox"><label for="HTML5">HTML5</label><br>
+                 <input type="checkbox"><label for="CSS3">CSS3</label><br>
+                 <input type="checkbox"><label for="JavaScript">JavaScript</label><br>
+                 <input type="checkbox"><label for="Mysquel">Mysquel</label><br>
+                 <input type="checkbox"><label for="PHP">PHP</label><br>
+                 <input type="checkbox"><label for="Phyton">Phyton</label>
+
+             </div>
+
+
+
+             <label for="Tell us About you" id="label-text">Tell us About you</label>
+             <br>
+<textarea placeholder="Comment here" value="Comment here" > 
+
+</textarea>
+</div>
+
+<div class="submit">
+    <input type="submit">
+
+    </div>
+
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-size: 16px;
+   background: linear-gradient(rgba(167, 159, 159, 0.808),rgba(167, 159, 120, 0.808)), url("./pexels-3.jpg");
+   background-size: cover;
+   background-position: center;
+    
+
+}
+.title-box {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    width: 100%;
+}
+
+#title {
+    font-size: 32px;
+    color: rgb(235, 139, 13);
+    font-display:20px;
+    
+}
+
+#sub-title {
+    font-size: 20px;
+    font-weight: 500;
+    
+}
+
+form {
+    background: rgba(44, 45, 46, 0.37);
+    width: 60vw;
+    display:block;
+    position:relative;
+    top: 25%;
+    left:25%;
+    right: 25%;
+    padding: 50px 40px 50px 40px;
+    margin-top: 50px;
+    border-radius: 15px;
+}
+
+.info-content {
+    font-size: 15px;
+    font-weight: 600;
+    display:block;
+    position: relative;
+    top: 25%;
+    left: 25%;
+}
+
+.info-content input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 35%;
+    padding: 0 10px 0 10px;
+    margin-top: 8px;
+    margin-bottom: 5px;
+    border-bottom:2px solid orange;
+
+}
+
+.skill-content {
+    position:relative;
+    top: 50%;
+    left: 25%;
+   
+}
+
+.skill-content select {
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    background: none;
+    border-radius:5px;
+    padding: 0 10px 0 10px;
+    width: 250px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-bottom:2px solid orange;
+
+}
+.skill-content option {
+    font-size: 14px;
+    font-weight: 700;
+    background-color: rgb(243, 178, 59);
+}
+
+.access-box {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    position:relative;
+    top: 50%;
+    left: 25%;
+    
+}
+.access-box input {
+    margin-right: 5px;
+    
+}
+
+.select-area  {
+    margin: 20px 0 20px 0;
+    position: relative;
+    top: 35%;
+    left: 25%;
+}
+
+.select-area select {
+    font-size: 14px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+    background: none;
+    border-radius: 5px;    
+    width: 250px;
+    padding: 0 10px 0 10px;
+    border-bottom: 2px solid orange;
+}
+.select-area option {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 5px 0 5px 0;
+    background-color: rgb(224, 197, 42);
+}
+
+
+
+
+
+.select-checkbox {
+    position: relative;
+    top: 25%;
+    left: 25%;
+    margin: 8px 0 8px 0;
+    font-size: 14px;
+}
+
+.select-checkbox input {
+    margin-right: 5px;
+    margin-top: 5px;
+    
+}
+
+
+  textarea {
+    
+    width: 300px;
+    height: 100px;
+    position: relative;
+    top: 25%;
+    left: 25%;
+    background-color: rgb(231, 175, 54);
+   
+}
+
+#label-text {
+    
+        font-size: 14px;
+        font-weight: 700;
+        position: relative;
+        top: 25%;
+        left: 25%;
+}
+
+
+
+
+
+.submit {
+    position: relative;
+    top: 25%;
+    left: 40%;
+    margin-top: 10px;
+   
+
+}
+
+.submit input {
+    width: 90px;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(24, 241, 220, 0.836);
+
+
+}
+
+.big-text {
+    font-size: 16px;
+    font-weight:700;
+    margin-bottom: 5px;
+}
+
+input::placeholder {
+    color: rgb(29, 27, 27);
+    font-size: 14px;
+}

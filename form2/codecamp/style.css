@@ -1,0 +1,145 @@
+* {
+       margin: 0;
+       padding: 0;
+       box-sizing: border-box;
+    }
+
+    body {
+        background-image:url(https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260) ;
+    background-color:  rgba(39, 2, 36, 0.7);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+        background-blend-mode: multiply;
+        color: rgb(216, 105, 27);
+        font-size: 16px;
+    }
+
+  .header {
+      text-align: center;
+      margin: 30px;
+      padding: 30px;
+       font-family: 'Inter', sans-serif;
+  }
+
+  .header > h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: rgb(37, 36, 36);
+      letter-spacing: 1px;
+      line-height: 1.5;
+  }
+  
+  
+  .header >  p {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgb(219, 215, 215);
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width:50% ;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: rgba(82, 79, 79, 0.791);
+    font-family: 'Raleway', sans-serif;
+    border-radius: 10px;
+    
+
+}
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+input[type="text"] {
+    margin: 4px 0;
+    padding: 4px 0;
+    border-radius: 5px;
+
+   
+}
+
+input[type="number"] {
+    margin: 5px 0;
+    padding: 3px 0;
+    border-radius: 5px;
+
+   
+}
+
+input::placeholder {
+ padding: 5px;
+ font-size: 12px;
+ border-radius: 7px;
+
+}
+
+
+.box > p {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: rgba(233, 230, 230, 0.861);
+    font-weight: 800;
+}
+.box > label {
+    font-size: 16x;
+    color: cornsilk;
+}
+
+.box label > select {
+    width: 100%;
+    margin: 10px 0;
+    padding: 4px;
+    border-radius: 7px;
+}
+
+.box > label > input[type="radio"] {
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+   }
+
+
+   .box > label > input[type="checkbox"] {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 5px;
+    
+   }
+
+   .text-box p {
+       margin-top: 10px;
+   }
+
+   textarea {
+       width:100% ;
+       height: 150px;
+       margin: 10px 0;
+   }
+
+
+   .button {
+            display: block;
+      
+            
+   }
+
+   .btn {
+       width: 100%;
+       margin-top: 10px;
+       padding: 10px;
+       font-size: 16px;
+       background: #89d73a;
+       text-transform: capitalize;
+      color: cornsilk;
+      border-radius: 10px;
+   }

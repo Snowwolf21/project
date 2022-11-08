@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 960px;
+    margin:auto;
+   
+    text-align:left;
+    display: flex;
+   
+    align-items: center;
+    
+}
+
+.left {
+         background:url(./images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:right;
+    background-origin: border-box
+    overflow:;
+}
+

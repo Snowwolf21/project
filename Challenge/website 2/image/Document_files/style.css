@@ -1,0 +1,189 @@
+*
+	{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+body 
+	{
+		font-family: sans-serif;
+	
+	}
+
+img 
+	{
+		display: block;
+	}
+
+h1,h2,h3,p
+	{
+		margin: 0;
+	}
+section
+	{
+		padding: 100px;
+	}
+
+header {
+	width: 100%;
+	padding: 10px 40px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	background:lightsalmon;
+	background-size: cover;
+	position: fixed;
+	z-index: 1000;
+	}
+.logo-box 
+	{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		position: relative;
+	}	
+
+
+	.logo-box .img-Bx
+		{
+			width: 30px;
+			height: 30px;
+			position: relative;
+		}
+
+.logo-box .img-Bx img 
+			{
+				position: absolute;
+				top: 0 ;
+				left: -10px;
+				width: 100%;
+				height: 100%;
+				transform: rotate(135deg);
+			}
+header .logo-box .logo-title
+			{
+				font-size: 2rem;
+				font-weight: 700;
+				color: gray;
+				letter-spacing: 1px;
+			}
+.navigation 
+			{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+.navigation li 
+			{
+				display: block;
+				margin-left: 20px;
+				padding: 0.5em;
+				text-align: center;
+			}
+.navigation li a 
+			{
+				text-decoration: none;
+				font-size: 1.25rem;
+				font-weight: 700;
+				color: beige;
+				transition: all 300ms ease-in-out;
+			}
+.navigation li a:hover 
+	{
+		color: gray;
+	}
+
+.navigation li:last-child 
+	{
+		background: goldenrod;
+		border-radius: 5px;
+	}
+.primary 
+		{
+			width: 100%;
+			background: url(./pexels-21.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+.container 
+		{
+			width: 80%;
+			padding:14em 9em;
+			font-weight: 400;
+			color: grey;
+		}
+
+.primary .primary-title
+			{
+				font-size: 1.5em;
+			}
+
+.primary .primary-title span
+			{
+				display: block;
+				font-size: 2.4em;
+				padding: 0 .8em;
+			}
+
+.primary p 
+		{
+			line-height: 1.6;
+			padding: 0 2.4em;
+			font-size: 1.125em;
+			
+		}
+.about-us  
+			{
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+.section-title 
+		{
+			text-align: center;
+			font-size: 2.4em;
+			font-weight: 400;
+			letter-spacing: 1px;
+
+		}
+.box 
+		{
+			width: 80%;
+			display: flex;
+			justify-content:space-between;
+			align-items: center;
+			flex-wrap: wrap;
+			margin-top: 20px;
+			padding: 20px;
+		}
+.row-50 
+		{
+			width: 500px;
+			position: relative;
+
+		}
+.row-50 p
+		{
+			text-align: center;
+			font-size: 1.125em;
+			font-weight: 500;
+			line-height: 1.6;
+			
+		}
+.row-50 .img-Box 
+		{
+			position: relative;
+			width: 100%;
+			height:400px ;
+		}
+
+
+.row-50 .img-Box img 
+		{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
