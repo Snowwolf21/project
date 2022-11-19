@@ -60,3 +60,7 @@ colorHex.textContent = hexColor
     containerRgba.style.backgroundColor = rgbColor
     colRgba.textContent = rgbColor 
 }
+
+
+
+// print(hex)
