@@ -39,23 +39,24 @@ body
         }
     header
         {
-            width: 90%;
+            width: 100%;
             margin: 0 auto;
             grid-area: header;
             display: flex;
             flex-direction: row;
             /* flex-wrap: wrap; */
             align-items: center;
-            justify-content:space-evenly;
+            justify-content:space-between;
             padding: 1.78rem 4.8rem;
-            border-bottom: 0.8px solid gray;
+            /* border-bottom: 0.8px solid gray; */
             /* background-color: gold; */
            
         }
-       header:hover ul  li
+        header:hover ~ 
             {
               
                 border-bottom: 5px solid green;
+                margin-bottom: -5px;
             }
                 
         nav 
@@ -70,6 +71,7 @@ body
         .logo
             {
                 width: 120px;
+                height: auto;
                 
             }
         .logo img
@@ -135,7 +137,7 @@ body
             display: flex;
             justify-content: space-between;
             padding:5rem 2.5rem;
-           /* border-top: 0.8px solid gray; */
+           border-top: 0.8px solid gray;
             margin: 0 auto;
         }
      .product-container
@@ -330,39 +332,84 @@ body
         /* Mobile view Media Query */
 
         @media screen and (max-width: 800px) {
-            .small-container{
+            *
+            {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+           .small-container {
                 min-width: 375px;
                 height: 100vh;
-                padding: 0.2rem 0.6rem;
-            }
-            header {
-                padding:0 1.3rem;
                 width: 100%;
-                margin: 0 auto;
-                border: 3px solid red;
-            }
-            .menu-btn {
-                visibility: visible;
-                border: none;
-                outline: none;
-                padding: 0.5rem 0.55rem;
-                margin-right: 0.8rem;
-                background:url(./images/icon-menu.svg);
+                padding: 0 2em;
                
+           }
+        header
+            {
+                height: 3.2rem;
+               width: 100%;
+                padding:0 0.55rem ;
+                
             }
-            nav {
+        nav 
+            {
                 flex: 0;
             }
-            .logo
-                {
-                    width: 100px;
-                }
-            .nav-links {
-                flex-direction: column;
-                visibility: hidden;
-            }
-            .nav-links li
-            {
-                margin-left: 0.8rem;
-            }
+        nav .menu-btn
+                    {
+                        visibility: visible;
+                        border: none;
+                        outline: none;
+                        padding: 0.45rem  ;
+                        margin-right: 0.5rem;
+                        background:url(./images/icon-menu.svg);
+                    }
+        /* .close-btn
+                    {
+                        visibility: visible;
+                        border: none;
+                        outline: none;
+                        padding: 0.5rem 0.55rem;
+                        margin-right: 0.8rem;
+                        background:url(./images/icon-close.svg);
+                    } */
+         nav .nav-links
+                    {
+                        display: none;
+                    }
+        nav .logo
+                    {
+                        width: 100px;
+                    
+                    }
+        nav .logo img 
+                    {
+                        width: 100%;
+                    }
+        .avartar
+                    {
+                        width: 1.8rem;
+                        height: 1.8rem;
+                        margin-left: 16px;
+                    }
+                    .cart
+                        {
+                            width: 1.1rem;
+                            height: 1.1rem;
+                        }
+                .cart img
+                        {
+                            width: 100%;
+                            height: 100%;
+                        }
+            main
+                        {
+                            width: 100%;
+                            height: calc(100vh-8vh);
+                            border: none;
+                            padding: 0;
+                            flex-direction: column;
+                            margin: 0;
+                        }
         }
