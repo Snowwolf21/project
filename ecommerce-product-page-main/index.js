@@ -1,7 +1,6 @@
-const btns = document.querySelectorAll(".btn");
+const btns = document.querySelectorAll(".btns");
  btns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
-        const key = e.classList
-        console.log(key)
+        console.log("Hello")
     })
  })
