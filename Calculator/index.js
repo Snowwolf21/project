@@ -1,191 +1,76 @@
-const calcDisplay = document.querySelector('.calc-display')
-const btns = document.querySelectorAll('button')
-const calculator = document.querySelector('.calculator')
-btns.forEach(function(btn){
-   btn.addEventListener('click', function(e){
-      const key = e.target
-      const action = key.dataset.action
-      const keyContent = key.textContent
-      const displayNum = calcDisplay.textContent
-      const previousKeyType = calculator.dataset.previousKeyType
-      if (!action) {
-         if (displayNum ==='0' || 
-         previousKeyType === 'operator'){
-            calcDisplay.textContent = keyContent
-         } else {
-            calcDisplay.textContent = displayNum + keyContent
+const container = document.querySelector(".container")
+const calculator = container.querySelector(".calculator")
+const calcDisplay = document.querySelector(".calc-display")
+calculator.addEventListener("click", e => {
+ if(e.target.matches("button")) {
+         const key = e.target
+         const action = key.dataset.action
+         const displayNumb = calcDisplay.textContent
+         const keyContent = key.textContent
+         const previousKeyType = container.dataset.previousKeyType
+        
+      
+         if (!action) {
+               //  console.log("number key!")
+               if (displayNumb === "0" || previousKeyType === "operator") {
+                  calcDisplay.textContent = keyContent
+               } else {
+                  calcDisplay.textContent = displayNumb + keyContent
+               }
+               calculator.dataset.previousKey = "number"
          }
-         
-      }
-     
-      if (
-         action === 'add' ||
-         action === 'subtraction' ||
-         action === 'plus-minus' ||
-         action === 'multiplication' ||
-         action === 'subtraction' ||
-         action === 'divide' ||
-         action === 'percentage'
-      ) {
-         key.classList.add('is-depressed')
-         Array.from(key.parentNode.children)
-            .forEach(k => 
-               k.classList.remove('is-depressed'))
-         // console.log('operator-key!!')
+         if (action ==="plus-minus" ||
+              action === "percentage" ||
+              action === "divide" ||
+              action === "multiplication" ||
+              action === "subtraction" ||
+              action === "add") {
+                  //  console.log("operator key!!")
+                   key.classList.add("is-depressed")
+                     Array.from(key.parentNode.children)
+                     .forEach(k => k.classList.remove("is-depressed"))
+                     calculator.dataset.firstValue = displayNumb
+                     calculator.dataset.operator = action
+                     
+              }
+         if (action === "decimal") {
+            if(!displayNumb.includes(".")) {
+               calcDisplay.textContent = displayNumb + "."
+            } else if (prevKeyType === "operator") {
+               calcDisplay.textContent = "0."
             }
-      if (action === 'decimal') {
-         calcDisplay.textContent = displayNum + '.'
+            calculator.dataset.previousKeyType = "decimal"
+         }
+         if (action === "clear") {
+                    console.log("clear")
+                  calcDisplay.textContent = 0
+         } 
+         if (action === "calculate") {
+                    console.log("equal key!!")
+                    const firstValue = calculator.dataset.firstValue
+                    const operator = calculator.dataset.operator
+                    const secondValue = displayNumb
+                   calcDisplay.textContent = calculate(firstValue,operator,secondValue)
+
+         }
       }
-      if (action === 'clear') {
-         calcDisplay.textContent = '0'
-      }
-      if (action === 'calculate') {
-         const secondValue = displayNum
-         console.log('calculate number')
-      }
-   })
+        
 })
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const calcDisplay = document.querySelector(".calc-display");
-// const btns = document.querySelectorAll("button");
-
-// btns.forEach(function(btn){
-//     btn.addEventListener("click", function(e){
-//     const key = e.target
-//     const action = key.classList
-//     const displayNum = calcDisplay.textContent
-//     const keyContent = key.textContent
-//     const previousKeyType = action.previousKeyType
-
-//      if(!action.contains("btn")){
-//         if (displayNum === "0" || previousKeyType === 'operator') {
-//             calcDisplay.textContent = keyContent
-//         } else {
-//             calcDisplay.textContent = displayNum + keyContent
-//         }
-//      }
-//      if (action.contains("plus-minus") ||
-//           action.contains("percentage") ||
-//           action.contains("divide") ||
-//           action.contains("multiply") ||
-//           action.contains("subtract") ||
-//           action.contains("add") ) {
-//             action.add('is-depressed')
-//             Array.from(key.parentNode.children).forEach(function(k){
-//                k.classList.remove('is-depressed')
-
-            
-//             })
-//             console.log("operator key!!")
-//           }
-
-//      if (action.contains("decimal")) {
-//         calcDisplay.textContent = displayNum + "."
-//      }
-//      if(action.contains("clear")) {
-//         calcDisplay.textContent = 0
-//      }
-//      if (action.contains("calculate")) {
-//       const secondValue = displayNum
-//         console.log("calculate")
-//      }
-//     })
-// })
-
-
- 
+const calculate = (n1,operator,n2) => {
+   let result = ""
+   if (operator === "add") {
+        result = parseFloat(n1) + parseFloat(n2) 
+    } else if (operator === "subtraction") {
+      result = parseFloat(n1) - parseFloat(n2)
+    } else if (operator === "multiplication") {
+      result = parseFloat(n1) * parseFloat(n2)
+    } else if (operator === "divide") {
+      result = parseFloat(n1) / parseFloat(n2)
+    } else if (operator === "percentage") {
+      result /= 100
+    }
+      return result
+}
