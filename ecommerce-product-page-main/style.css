@@ -9,7 +9,7 @@
 --Grayish-blue: hsl(220, 14%, 75%);
 --Light-grayish-blue: hsl(223, 64%, 98%);
 --White: hsl(0, 0%, 100%);
---Black(with 75% opacity for lightbox background): hsl(0, 0%, 0%);
+--Black(with 75% opacity for lightbox background):hsl(0, 0%, 0%);
 
  }
 
@@ -32,7 +32,7 @@
         justify-content: center;
         align-items: center;
         background-color: aqua;
-        
+       
  }
 
  .container .inner-container {
@@ -40,6 +40,7 @@
     max-width: 375px;
     min-height: 100vh;
     overflow: hidden;  
+ 
     
 
  }
@@ -52,21 +53,22 @@
     flex-wrap: wrap;
     align-items: center;
     flex: 1 1 0;
-    padding:0.85rem 1.5rem;
+    padding:0.75rem 0.85rem;
     background-color: hsl(0, 0%, 100%);
-    
+    z-index: 1000;
 }
 
-header .nav-toggle {
-    margin-right: 1rem;
-    cursor: pointer;
+header .nav-btn {
+cursor: pointer;
+ 
 } 
 
 
 
 header .logo {
-    margin-right:auto;
-   cursor: pointer;
+    margin-left: 1rem;
+    margin-right: auto;
+   
 }
 
 header .logo img {
@@ -74,44 +76,54 @@ header .logo img {
     width: 100%;
 }
 
-header .cart {
-        margin-right: 0.8rem;
+header .cart-btn {
+        margin-right: 0.5rem;
+        padding: 0.8rem;
        cursor: pointer;
 }
 
 header .avatar {
-    margin-left:0.7rem;
+    margin-left:0.5rem;
     width: 40px;
     height: 40px;
     border: 2px solid var(--Orange);
     border-radius: 50%;
-   
-   
-}
+   }
 
 header .avatar img {
     width: 100%;
     height: 100%;
     
 }
- header .links {
-    position: absolute;
-    top: 0;
-    left: 0;
-    list-style: none;
-   padding-top: 4.2rem;
-   padding-left: 1.5rem;
-   opacity: 0;
- 
-    
- }
 
- header .links li {
+header  .links {
+   position: relative;
+    padding-top: 1.5rem;
+    width: 100%;
+    max-width: 70%;
+   height: 100vh; 
+    visibility: collapse;
+}
+
+.close-btn {
+    padding-top: 0.85rem;
+    padding-left: 0.85rem;
+}
+
+ header .links ul {
+  
+    list-style: none;
+   padding-top: 3.5rem;
+   padding-left: 1.5rem;
+   
+}
+
+ header .links ul li {
     padding: 0.7rem 0;
     display:block;
  }
 
- header .links li a {
+ header .links ul li a {
     text-decoration: none;
     text-transform: capitalize;
     font-size: 1.25rem;
@@ -119,11 +131,18 @@ header .avatar img {
     color: #333;
 }
 header .show-links {
-     width: 100%;
-    max-width: 70%;
-    height: 100vh;
+     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: var(--White);
-    opacity: 1;
+   visibility: visible;
+    
+    
+}
+
+main {
+    position: relative;
 }
 main .hero {
     width:100%;
@@ -151,7 +170,7 @@ main .hero .btn {
 main .info-container {
     padding:0.85rem;
     margin: 0 auto;
-
+    
     border: 1px solid red;
     background-color: whitesmoke;
 }
@@ -219,9 +238,11 @@ main .info-container .btns {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.8rem 1rem;
-    margin: 0.4rem auto;
+    padding: 0.85rem 1.35rem;
+    margin: 0.5rem 0;
     background-color: var(--Light-grayish-blue);
+    border-radius: 10px;
+    color: #444;
 }
 
 main .info-container .btns .info-output {
@@ -246,6 +267,154 @@ main .info-container .cart-box .cart-btn .btn-info {
 
 }
 
-main .info-container .cart-box .cart-btn .img {
-    background:;
+main .cart-info {
+ position: absolute;
+top:0;
+left:0;
+visibility: collapse;
+
 }
+
+main  .show-cart {
+        margin: 0.5rem;
+        width: 95%;
+        height: 16rem;
+        border-radius: 10px; 
+        background-color:var(--White); 
+        visibility: visible;
+        overflow: hidden;
+        
+ }
+
+ main .cart-info .cart-head {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+     border-bottom: 1.5px solid rgba(55, 54, 54, 0.2);
+    
+ }
+
+main .cart-info .cart-head .cart-text {
+        font-size: 1.1rem;
+        font-weight: 600;
+        letter-spacing: 1.1px;
+        padding: 1.25rem;
+       
+}
+
+main .cart-info .cart-box-info {
+            width: 100%;
+            height: 100%;
+            max-height: 12rem;
+            display: grid;
+            place-items: center;
+            position: relative;
+         
+   
+}
+main .cart-info .cart-box-info .empty-cart {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    }
+
+ main .cart-info .cart-box-info .remove-empty-cart {
+    opacity: 0;
+    visibility: collapse;
+ }
+
+main .cart-info .cart-box-info .empty-txt {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: var(--Dark-grayish-blue);
+           
+    }
+
+main .price {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+     width: 100%;
+     height: 100%;
+     padding: 0.85rem 1rem;
+     visibility: visible;
+     
+}
+ main .show-price {
+  
+ visibility: hidden;
+ opacity: 1;
+}
+
+main .price .price-box {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 0.5rem;
+
+}
+
+
+main .price-box .img-box {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    
+    
+}
+
+main .price-box .img-box img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+main .price-box .price-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   margin-left: 1.2rem;
+   
+}
+
+main .price-details-text p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+main .cart-box-info .check-out {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  var(--Orange);
+    width: 95%;
+    margin: 0 auto;
+  padding:0.85rem 0.85rem;
+  border-radius: 10px;
+}
+
+main .cart-box-info .check-out p {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--White);
+    text-transform: capitalize;
+}
+
