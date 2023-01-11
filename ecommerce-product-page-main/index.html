@@ -19,37 +19,42 @@
   <div class="container">
     <div class="inner-container">
       <header>
-     
-        <div class="nav-btn .close-btn">
+      <!-- Menu btn -->
+        <div class="nav-btn">
           <img src="./images/icon-menu.svg" alt="">
         </div>
         
+      <nav class="new">
         <div class="logo">
           <img src="./images/logo.svg" alt="">
         </div>
+        <div class="links">
+          <div class="close-btn">
+            <img src="./images/icon-close.svg" alt="">
+          </div>
+          <ul>
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul> 
+      </div>
+    </nav>
         <div class="cart-btn">
-          <img src="./images/icon-cart.svg" alt="cart">
+          <!-- <img src="./images/icon-cart.svg" alt="cart"> -->
           <span class="cart-count">0</span>
         </div>
         <div class="avatar">
           <img src="./images/image-avatar.png" alt="">
         </div>
 
-        <nav class="links">
-            <div class="close-btn">
-              <img src="./images/icon-close.svg" alt="">
-            </div>
-            <ul>
-                <li><a href="#">Collections</a></li>
-                <li><a href="#">Men</a></li>
-                <li><a href="#">Women</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul> 
-        </nav>
       </header>
+
+      <!--  product details and information of each catalogue of shoe -->
       <main>
-        <div class="hero-container">
+        <div class="hero-container ">
+          
                 <div class="hero">
                       <div class="btn prev-btn">
                           <img src="./images/icon-previous.svg" alt="">
@@ -58,7 +63,22 @@
                           <img src="./images/icon-next.svg" alt="">
                       </div>
                </div>
+               <div class="hero-btns">
+                <button class="btn  product-1-btn">
+                  <!-- used background image -->
+                </button>
+                <button class="btn product-2-btn">
+                   <!-- used background image -->
+                </button>
+                <button class="btn product-3-btn">
+                 <!-- used background image -->
+                </button>
+                <button class="btn product-4-btn">
+                 <!-- used background image -->
+                </button>
+               </div>
         </div>
+        <!-- product detail information container -->
         <div class="info-container">
               <div class="product-info-container">
 
@@ -76,12 +96,13 @@
                 </p>
 
                 <div class="price-info">
-                    <h4>$125.00 <span class="discount-info">50%</span></h4>
+                    <p>$125.00 <span class="discount-info">50%</span></p>
                     <p class="info-strike-out">$250.00</p>
               </div>
 
               <div class="btns-container">
                         <div class="btns">
+                          <!-- Increase and Decrease count  -->
                                 <div class="btn decrease">
                                     <img src="./images/icon-minus.svg" alt="">
                                 </div>
@@ -90,16 +111,17 @@
                                     <img src="./images/icon-plus.svg" alt="">
                                 </div>
                       </div>
+                      <!-- Add the number of item to the cart box  -->
                       <div class="cart-box">
-                              <div class=" btn cart-btn">
+                              <button class=" btn cart-btn">
                                       <span class="btn-info img">
                                         <img src="./images/icon-cart.svg" alt="">
                                       </span>
                                     <span class="btn-info">Add to cart</span>
-                              </div>
+                              </button>
                       </div>
               </div>
-
+       <!-- This is for the cart display box modal -->
               
                     <div class="cart-info">
                             <div class="cart-head">
@@ -127,9 +149,7 @@
                                       <p>checkout</p>
                                  </button>
                               </div>
-                                <!-- <button class="btn check-out">
-                                     <p>checkout</p>
-                                </button> -->
+                               
                           </div>
                                   
                             </div>
@@ -138,6 +158,35 @@
               </div>
           </div>
       </main>
+        <div class="show-modal">
+              <div class=" hero modal-content">
+                <div class="btn close-modal">
+                  <!-- Used background image here -->
+                </div>
+                <div class="btns">
+                  <div class="btn prev-btn">
+                    <img src="./images/icon-previous.svg" alt="">
+                  </div>
+                  <div class="btn next-btn">
+                    <img src="./images/icon-next.svg" alt="">
+                  </div>
+                </div>
+                <div class="hero-btns">
+                  <button class="btn product-1-btn"> 
+                     <!-- Used background image here -->
+                     </button>
+                  <button class="btn product-2-btn">
+                     <!-- Used background image here -->
+                  </button>
+                  <button class="btn product-3-btn"> 
+                     <!-- Used background image here -->
+                  </button>
+                  <button class="btn product-4-btn"> 
+                     <!-- Used background image here -->
+                      </button>
+                </div>
+              </div>
+        </div>
       <div class="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="#">Your Name Here</a>.
