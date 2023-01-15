@@ -1,0 +1,229 @@
+:root {
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+--Light-Grayish-Blue: hsl(234, 14%, 74%);
+--Grayish-Blue: hsl(233, 13%, 49%);
+--Dark-Grayish-Blue: hsl(232, 13%, 33%);
+
+/* linear gradient */
+--Linear-Gradient:linear-gradient(to right, hsl(236, 72%, 79%) 0%, hsl(237, 63%, 64%) 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 375px;
+    min-height: 100vh;
+  
+    /* padding: 1.25rem; */
+    background-image: url(./images/bg-top.svg);
+    background-color: var( --Very-Light-Grayish-Blue);
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-attachment: fixed; */
+    background-position: 180px -50px;
+    background-blend-mode:multiply;
+   
+  
+}
+
+header {
+    width: 100%;
+    padding: 1rem;
+    /* background-color: antiquewhite; */
+    
+
+}
+
+header .pricing-title {
+    font-size: 1.7rem;
+    text-transform: capitalize;
+    text-align: center;
+    color:var(--Dark-Grayish-Blue) ;
+    
+}
+
+header .subscription {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+header .subscription .plan {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--Light-Grayish-Blue);
+}
+
+header .subscription .toggle {
+    background-color:hsl(237, 63%, 64%);
+    width: 60px;
+    height: 20px;
+   display: flex;
+   align-items: center;
+    border-radius: 25px;
+   
+}
+
+header .subscription .toggle .toggle-btn {
+    width: 20px;
+    height: 20px;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background:var(--Very-Light-Grayish-Blue);
+    transition: all 100ms ease-in-out;
+   
+}
+header .subscription .toggle .show-monthly {
+    transform: translateX(200%);
+}
+
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 100%;
+    padding: 2.5rem;
+
+}
+
+.pricing-container .price-card {
+    width: 100%;
+    height: 380px;
+    border-radius: 10px;
+    background:white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+   padding: 1.5rem;
+   
+}
+
+.price-card .card-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--Grayish-Blue);
+ 
+}
+.price-card.professional .card-title {
+    padding-top: 1.2rem;
+}
+.price-card .price {
+        font-size: 3.25rem;
+        color: #333;
+        border-bottom: 0.5px solid var(--Light-Grayish-Blue);
+        padding: 1rem;
+
+}
+
+.price-card .price .annual-price {
+    display: block;
+}
+.price-card .price .monthly-price {
+    display: none;
+}
+.price-card.professional .price .annual-price, .price-card.professional .price .monthly-price {
+  
+}
+
+.price-card .storage, .price-card .users, .price-card .send {
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    border-bottom: 0.5px solid var( --Light-Grayish-Blue);
+    padding: 0.75rem;
+    color: var(--Grayish-Blue);
+
+}
+.price-card.professional .card-title, .price-card.professional .price, .price-card.professional .storage, .price-card.professional .users, .price-card.professional .send {
+    color: var(--Very-Light-Grayish-Blue);
+    
+}
+.price-card .btn {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+   margin: 1.4rem 0;
+    padding:0.75rem;
+    background:var(--Linear-Gradient);
+    border: none;
+    border-radius: 10px;
+    color: var(--Very-Light-Grayish-Blue);
+    cursor: pointer;
+}
+
+.price-card .btn:hover {
+    border: 1.5px solid var(--Grayish-Blue);
+    background: transparent;
+    color: var(--Grayish-Blue);
+
+}
+.price-card.professional {
+    background:var(--Linear-Gradient) ;
+
+}
+
+.professional .btn {
+    
+    background: var(--Very-Light-Grayish-Blue);
+    color: var(--Grayish-Blue);
+}
+.professional .btn:hover {
+    border-color: var(--Very-Light-Grayish-Blue);
+    color: var(--Very-Light-Grayish-Blue);
+}
+
+/* Desktop design   media-queries*/
+@media screen and (min-width: 992px) {
+    .container {
+        width: 100%;
+        max-width: 1440px;
+        background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-size: contain, contain;
+        background-position: top right, bottom left;
+        
+    }
+    header {
+        
+       
+    }
+
+
+    header .subscription {
+      justify-content: center;
+      padding: 2.5rem;
+    }
+
+    .pricing-container {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.2rem;
+    }
+    .pricing-container .price-card {
+        width: 21em;
+        height: 25em;
+    }
+    .pricing-container .price-card.price-card.professional {
+        height: 28em;
+    }
+}
