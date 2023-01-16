@@ -11,14 +11,14 @@ The designs were created to the following widths:
 
 ### Primary
 
-- Linear Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
-
+--Linear-Gradient: hsl(236, 72%, 79%) to hsl(237, 63%, 64%)
+        linear-gradient(to right, hsl(236, 72%, 79%) 80%, hsl(237, 63%, 64%) 100%)
 ### Neutral
 
-- Very Light Grayish Blue: hsl(240, 78%, 98%)
-- Light Grayish Blue: hsl(234, 14%, 74%)
-- Grayish Blue: hsl(233, 13%, 49%)
-- Dark Grayish Blue: hsl(232, 13%, 33%)
+--Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+--Light-Grayish=Blue: hsl(234, 14%, 74%);
+--Grayish-Blue: hsl(233, 13%, 49%);
+--Dark-Grayish-Blue: hsl(232, 13%, 33%);
 
 ## Typography
 
