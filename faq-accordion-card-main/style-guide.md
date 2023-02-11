@@ -20,19 +20,19 @@ The designs were created to the following widths:
 
 Background gradient:
 
-- Soft violet: hsl(273, 75%, 66%)
-- Soft blue: hsl(240, 73%, 65%)
+--Soft-violet: hsl(273, 75%, 66%)
+--Soft-blue: hsl(240, 73%, 65%)
 
 ### Neutral
 
 #### Text
 
-- Very dark grayish blue: hsl(237, 12%, 33%)
-- Dark grayish blue: hsl(240, 6%, 50%)
+--Very-dark-grayish-blue: hsl(237, 12%, 33%)
+--Dark-grayish-blue: hsl(240, 6%, 50%)
 
 #### Dividers
 
-- Light grayish blue: hsl(240, 5%, 91%)
+--Light-grayish-blue: hsl(240, 5%, 91%)
 
 ## Typography
 

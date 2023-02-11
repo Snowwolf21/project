@@ -30,22 +30,21 @@ body {
 }
 
 .container {
-    width: 100%;
-    max-width: 376px;
-    /* height: 100vh; */
-    background-color: var(--Pastel-blue);
-    
+    width:500px;
+    /* max-width: 500px; */
+    height: 100vh;
+    border: 5px solid gold;
+ 
 }
 
 .side-bar {
     width: 100%;
-    height: 12em;
+    height: 200px;
     background-image: url(./assets/images/bg-sidebar-mobile.svg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-    /* display: flex;
-    justify-content: center; */
+    background-position:center;
+   
 }
 
 .side-bar .step-list {
@@ -73,7 +72,7 @@ body {
 }
 
 .side-bar .step-list .step-list-item .item .item-id .item-number {
-   font-size: 1.3rem;
+   font-size: 1.25rem;
    font-weight: medium;
    color: var(--White);
    
@@ -82,17 +81,239 @@ body {
 .side-bar .step-list .step-list-item .item .item-info {
     display: none;
 }
-
-.content {
+ 
+main {
+    border: 3px solid red;
+    background-color: aqua;
     width: 100%;
+    height: 65vh;
+    position: relative;
+   
+}
+
+section {
+   
+   width:400px;
+   /* max-width: 420px; */
+   background: var(--White);
+   display: none;
+    position: absolute;
+    top: -16%;
+    left: 10%;
+    right: 10%;
+    
+    border-radius: 10px;
+    padding: 1.75rem;
+    box-shadow: inset;
+}
+
+footer {
+    width: 100%;
+    height: 80px;
+    padding:0 1rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
-.content .content-box {
+
+footer .btn {
+    padding: 0.75rem 0.75rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    border: none;
+    color: var(--White);
+    background: var( --Marine-blue);
+    border-radius: 5px;
+}
+
+.step-1  {
+    display: block;
+}
+
+
+/* .step-1 form .form-title {
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.6;
+        color: var(--Marine-blue);
+}
+
+.step-1 form .title-info {
+    font-size: 1.25rem;
+    font-weight: 600;
+   padding: 0.5rem 1rem 0.5rem 0;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: var(--Cool-gray);
+} */
+
+.step-1 form .input-box {
+    margin: 0.85rem 0;
+}
+
+.step-1 form .label {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    line-height: 1.6;
+
+    color: var( --Marine-blue);
+}
+.step-1 form .label-box {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+ .step-1 form input {
+            width: 100%;
+            padding:0.75rem 1rem;
+            border: 2px solid var(--Light-gray);
+            border-radius: 5px;
+            outline: none;
+}
+
+.step-1 form  input::placeholder {
+   font-size: 1.12rem;
+   font-weight: 600;
+   letter-spacing: 1px;
+   color: var(--Cool-gray);
+}
+
+.step-2 {
+    display: none;
+    /* width: 100%; */
+
+}
+
+ .step-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.6;
+    color: var(--Marine-blue);
+}
+
+ .step-info {
+    font-size: 1.2rem;
+    font-weight: 600;
+   padding: 0.5rem 1rem 0.5rem 0;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    color: var(--Cool-gray);
+}
+
+.step-2 .plan-container {
+    border: 3px solid red;
     width: 100%;
-    max-width: 375px;
-   
-    background-color: aqua;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  gap: 1rem;
+}
+
+.step-2 .plan-container article {
+
+    border: 1px solid var(--Light-gray);
+    /* padding: 1.125rem; */
+    border-radius: 10px;
+    padding: 0.5rem;
+}
+
+.step-2 .plan-container article .article-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.4rem;
+}
+.step-2 .plan-container article .article-box img {
+    width: 45px;
+    height: 45px;
+}
+
+.step-2 .plan-container article .article-info p {
+    line-height: 1.4;
+}
+
+.step-2 .plan-container article .article-info .article-title {
+    font-size: 1.175rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+    color: var(--Marine-blue);
+}
+
+.step-2 .plan-container article .article-info .monthly-price {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--Cool-gray);
+    letter-spacing: 1.2px;
+   display: none;
+}
+
+.step-2 .plan-container article .article-info .yearly-price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--Light-gray);
+    letter-spacing: 1.4px;
+    display: flex;
+    flex-flow: column ;
+
+  
+}
+
+.step-2 .plan-container article .article-info .yearly-price .duration {
+    /* display: block; */
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--Marine-blue);
+}
+
+ .step-2 .subscription {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 1rem;
+    background-color: bisque;
+    margin: 1.2rem 0;
+    padding: 0.75rem;
+}
+
+.step-2 .subscription .plan {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: var( --Marine-blue);
+}
+
+.step-2 .subscription .toggle-box {
+    flex-basis: 50px;
+    height: auto;
+   display: flex;
+   align-items: center;
+    border-radius: 20px;
+    background-color: brown;
+}
+ 
+.step-2 .subscription .toggle-box .toggle-btn {
+width: 14px;
+height: auto;
+border-radius: 50%;
+padding: 0.5rem;
+transform: translateX(0);
+transition: all 100ms ease-in-out;
+}
+.step-2 .subscription .toggle-box .active {
+    transform: translateX(30px);
+    transition: all 100ms ease-in-out;
+}
+
+
+.step-3 {
+        display: none;
+}
+
+.step-3 .step-title {
+
 }

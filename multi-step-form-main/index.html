@@ -80,148 +80,125 @@
             </div>
           </div>
         </li>
-        <!-- Step list items end -->
+        <!-- End of step list item -->
       </ul>
        <!-- Step list end -->
     </aside>
-      <!-- side bar end -->
+      <!-- End of side bar -->
 
       <!-- main -->
     <main class="content">
           <!-- Section -->
         <section class="content-box step-1">
-              <h1 class="form-title"> Personal info</h1>
-              <p class="title-info"> Please provide your name, email address, and phone number.</p>
+             
                <!-- Form -->
-              <div class="form">
-
+              <form class="form ">
+                <h1 class="step-title"> Personal info</h1>
+                <p class="step-info"> Please provide your name, email address, and phone number.</p>
                 <!-- input box -->
                 <div class="input-box">
                 <div class="label-box">
-                  <p class="label">name</p>
+                  <p class="label" id="name">name</p>
                 </div>
-                    <input type="text" placeholder="e.g. Stephen King" id="name">
+                    <input type="text" placeholder="e.g. Stephen King" name = "name" id="name">
                 </div>
 
-                <!-- input box end -->
+                <!-- End of input box-->
 
                  <!-- input box -->
                 <div class="input-box">
                  <div class="label-box">
-                  <p class="label" >a-mail address</p>
+                  <p class="label"  id="email">email address</p>
                  </div>
-                    <input type="text" placeholder="e.g. stephenking@lorem.com" id="email">
+                    <input type="text" placeholder="e.g. stephenking@lorem.com" name="email" id="email">
                 </div>
-                 <!-- input box end -->
+                 <!--End of input box -->
 
                  <!-- input box -->
                 <div class="input-box">
                  <div class="label-box">
-                  <p class="label" >phone number</p>
+                  <p class="label" id="number">phone number</p>
                   <p class="label required">This field is required</p>
                  </div>
-                    <input type="tel" placeholder="e.g. +1 234 567 890" id="email">
+                    <input type="tel" placeholder="e.g. +1 234 567 890" name="number" id="number">
                 </div>
-                 <!-- input box end -->
-              </div>
+                 <!-- End of input box-->
+              </form>
               <!-- Form end -->
-              <div class="btns">
-                <button class=" btn prev-btn">go back</button>
-                <button class=" btn next-btn">next step</button>
-               </div>
+             
         </section>
-        <!-- Section end -->
+        <!-- End of Section-->
 
           <!-- Section -->
         <section class="content-box step-2">
-          <h1 class="form-title">Select your plan</h1>
-          <p class="title-info">  You have the option of monthly or yearly billing.</p>
-            <!-- Select  Plan container -->
+          <h1 class="step-title">Select your plan</h1>
+          <p class="step-info">  You have the option of monthly or yearly billing.</p>
+            <!-- Plan container -->
           <div class="plan-container">
             <!-- Card -->
             <article>
-              <div class="arcade">
-                <img src="./assets/images/icon-arcade.svg" alt="">
-                <div class="acrcade-info">
-                  <p class="arcade-title">arcade</p>
-                  <div class="price">
-                    <div class="monthly-price">
-                      <p class="amount">$9/mo</p>
-                    </div>
-                    <div class="yearly-price">
-                      <p class="amount">$90/yr</p>
-                      <p class="duration">2 months free</p>
-                    </div>
-                    
-                  </div>
+              <div class="article-box">
+                <img src="./assets/images/icon-arcade.svg" alt="article logo">
+                <div class="article-info">
+                  <p class="article-title">arcade</p>
+                  <p class="monthly-price">$9/mo</p>
+                   <p class="yearly-price">
+                    $90/yr
+                        <span class="duration">2 months free</span>
+                   </p>
                 </div>
               </div>
             </article>
             <!-- Card end -->
 
-             <!-- Card -->
+             <!-- Article  -->
             <article>
-              <div class="arcade">
+              <div class="article-box">
                 <img src="./assets/images/icon-advanced.svg" alt="">
-                <div class="acrcade-info">
-                  <p class="arcade-title">advance</p>
-                  <div class="price">
-                    <div class="monthly-price">
-                      <p class="amount">$12/mo</p>
-                    </div>
-                    <div class="yearly-price">
-                      <p class="amount">$120/yr</p>
-                      <p class="duration">2 months free</p>
-                    </div>
-                    
-                  </div>
+                <div class="article-info">
+                  <p class="article-title">advance</p>
+                  <p class="monthly-price">$12/mo</p>
+                 <p class="yearly-price">$120/yr
+                   <span class="duration">2 months free</span>
+                 </p>    
                 </div>
               </div>
             </article>
-              <!-- Card end -->
+              <!-- End of article -->
 
-              <!-- Card -->
+              <!-- Article -->
             <article>
-              <div class="arcade">
+              <div class="article-box">
                 <img src="./assets/images/icon-pro.svg" alt="">
-                <div class="arcade-info">
-                    <p class="arcade-title">pro</p>
-                    <div class="price">
-                      <div class="monthly-price">
-                        <p class="amount">$15/mo</p>
-                      </div>
-                      <div class="yearly-price">
-                        <p class="amount">$150/yr</p>
-                        <p class="duration">2 months free</p>
-                      </div>
-                      
-                    </div>
+                <div class="article-info">
+                    <p class="article-title">pro</p>
+                    <p class="monthly-price">$15/mo</p>
+                    <p class="yearly-price">$150/yr
+                          <span class="duration">2 months free</span>
+                  </p>    
                 </div>
               </div>
             </article>
-             <!-- Card end -->
+             <!-- End of article -->
           </div>
           <!-- subscription -->
 
           <div class="subscription">
-            <p class="month">monthly</p>
-            <div class="toggle">
+            <p class="plan">monthly</p>
+            <div class="toggle-box">
               <button class="toggle-btn"></button>
             </div>
-            <p class="year">yearly</p>
+            <p class="plan">yearly</p>
           </div>
          <!-- subscription end -->
-         <div class="btns">
-          <button class=" btn prev-btn">go back</button>
-          <button class=" btn next-btn">next step</button>
-         </div>
+        
     </section>
       <!-- Section end -->
 
        <!-- Section -->
        <section class="content-box step-3">
-        <h1 class="form-title">Select your plan</h1>
-        <p class="title-info">  You have the option of monthly or yearly billing.</p>
+        <h1 class="step-title">Pick add-ons</h1>
+        <p class="step-info">  Add-ons help enhance your gaming experience</p>
           <!-- Select  Plan container -->
         <div class="plan-container">
           <!-- Box -->
@@ -257,17 +234,14 @@
         <!-- Box end -->
         </div>
        
-       <div class="btns">
-        <button class=" btn prev-btn">go back</button>
-        <button class=" btn next-btn">next step</button>
-       </div>
+     
   </section>
     <!-- Section end -->
 
      <!-- Section -->
      <section class="content-box step-4">
-      <h1 class="form-title">Finishing up</h1>
-      <p class="title-info">  Double-check everything looks OK before confirming.</p>
+      <h1 class="step-title">Finishing up</h1>
+      <p class="step-info">  Double-check everything looks OK before confirming.</p>
         <!-- Select  Plan container -->
       <div class="finish-container">
         <div class="finish-box">
@@ -300,19 +274,16 @@
       </div>
     </div>
      
-     <div class="btns">
-      <button class=" btn prev-btn">go back</button>
-      <button class=" btn next-btn">next step</button>
-     </div>
+    
 </section>
   <!-- Section end -->
-  <section class="conttent-box step-5">
+  <section class="content-box step-5">
     <div class="content-container">
       <div class="img-bx">
         <img src="./assets/images/icon-thank-you.svg" alt="">
       </div>
-        <h1 class="appre-title">Thank you!</h1>
-      <p class="appreciation"> 
+        <h1 class="thanks-title">Thank you!</h1>
+      <p class="thanks-text"> 
        Thanks for confirming your subscription! We hope you have fun 
         using our platform. If you ever need support, please feel free 
         to email us at support@loremgaming.com.
@@ -321,10 +292,24 @@
   </section>
     </main>
     <!-- main end -->
+
+    <footer>
+      
+        <button class=" btn prev-btn">go back</button>
+        <button class=" btn next-btn">next step</button>
+      
+    </footer>
   </div>
 
 
+</body>
+</html>
 
+
+<!-- <div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Akinkunmi</a>.
+</div> -->
 
 
 
@@ -424,9 +409,3 @@
  
   <!-- Step 5 end -->
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Akinkunmi</a>.
-  </div>
-</body>
-</html>
