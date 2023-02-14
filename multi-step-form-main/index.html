@@ -140,8 +140,8 @@
               <div class="article-box">
                 <img src="./assets/images/icon-arcade.svg" alt="article logo">
                 <div class="article-info">
-                  <p class="article-title">arcade</p>
-                  <p class="monthly-price">$9/mo</p>
+                  <p class="title">arcade</p>
+                  <p class="price">$9/mo</p>
                    <p class="yearly-price">
                     $90/yr
                         <span class="duration">2 months free</span>
@@ -156,8 +156,8 @@
               <div class="article-box">
                 <img src="./assets/images/icon-advanced.svg" alt="">
                 <div class="article-info">
-                  <p class="article-title">advance</p>
-                  <p class="monthly-price">$12/mo</p>
+                  <p class="title">advance</p>
+                  <p class="price">$12/mo</p>
                  <p class="yearly-price">$120/yr
                    <span class="duration">2 months free</span>
                  </p>    
@@ -171,8 +171,8 @@
               <div class="article-box">
                 <img src="./assets/images/icon-pro.svg" alt="">
                 <div class="article-info">
-                    <p class="article-title">pro</p>
-                    <p class="monthly-price">$15/mo</p>
+                    <p class="title">pro</p>
+                    <p class="price">$15/mo</p>
                     <p class="yearly-price">$150/yr
                           <span class="duration">2 months free</span>
                   </p>    
@@ -202,35 +202,53 @@
           <!-- Select  Plan container -->
         <div class="plan-container">
           <!-- Box -->
-        <div class="box">
-          <input type="checkbox">
+        <article class="box">
+          <input type="checkbox" checked >
           <div class="box-info">
-            <p class="info-title">Online service</p>
-            <p class="info-text">Access to multiplayer games</p>
+           <span>
+            <p class="title">Online service</p>
+            <h1 class="text">Access to multiplayer games</h1>
+          </span>
+            <span>
+              <a href="!#" class="amount monthly">+$1/mo</a>
+               <a href="!#" class=" amount yearly">$10/yr</a>
+            </span>
           </div>
-          <p class="info-amount">+$1/mo</p>
-        </div>
+         
+        </article>
         <!-- Box end -->
           <!-- Box -->
-          <div class="box">
+          <article class="box">
             <input type="checkbox">
             <div class="box-info">
-              <p class="info-title">Local storage</p>
-              <p class="info-text">Extra 1TB cloud save</p>
+            <span>
+              <p class="title">Local storage</p>
+              <p class="text">Extra 1TB cloud save</p>
+            </span>
+              <span>
+                <a href="!#" class="amount monthly">+$2/mo</a>
+                <a href="!#" class=" amount yearly">$20/yr</a>
+              </span>
             </div>
-            <p class="info-amount">+$2/mo</p>
-          </div>
+            <!-- <p class="amount">+$2/mo</p> -->
+          </article>
           <!-- Box end -->
 
             <!-- Box -->
-        <div class="box">
+        <article class="box">
           <input type="checkbox">
           <div class="box-info">
-            <p class="info-title">Online service</p>
-            <p class="info-text">Custom on your profile</p>
+           <span>
+            <p class="title">  Customizable profile</p>
+            <p class="text">Custom on your profile</p>
+           </span>
+            <span>
+              <a href="!#" class="amount monthly">+$2/mo</a>
+              <a href="!#" class=" amount yearly">$20/yr</a>
+            </span>
           </div>
-          <p class="info-amount">+$2/mo</p>
-        </div>
+          <!-- <p class="amount">+$2/mo</p> -->
+        </article>
         <!-- Box end -->
         </div>
        
@@ -245,35 +263,34 @@
         <!-- Select  Plan container -->
       <div class="finish-container">
         <div class="finish-box">
-          <div class="sub-type">
-            <p class="sub-slected">Arcade(Monthly)</p>
-            <a href="#">Change</a>
+          <div class="service">
+            <p class="title">Arcade(Monthly)</p>
+            <a href="#" class="service-link">Change</a>
           </div>
-          <p class="sub-amount">$9/mo</p>
-          
+          <p class="amount monthly"> $9/mo </p>
+          <p class="amount yearly">$90/yr</p>
         </div>
 
         <div class="finish-box">
-          <div class="sub-type">
-            <p class="capacity">Arcade(Monthly)</p>
-            <p class="cap-amount">+$1/mo</p>
-          </div>
+            <p class="box-title">Online service</p>
+            <p class="amount monthly"> +$1/mo</p>
+            <p class="amount yearly"> $10/yr</p>
       </div>
 
       <div class="finish-box">
-        <div class="sub-type">
-          <p class="bg-storage">Larger storage</p>
-          <p class="cap-amount">+$2/mo</p>
+          <p class="box-title">Larger storage</p>
+          <p class="amount monthly">+$2/mo</p>
+          <p class="amount yearly">$20/yr</p>
+
         </div>
 
-        <div class="finish-box">
-          <div class="sub-type">
-            <p class="total">Arcade(Monthly)</p>
-            <p class="total-amount">+$12/mo</p>
-          </div>
-      </div>
+       
     </div>
-     
+
+    <div class="finish-box">
+      <p class="box-title">Total (per year)</p>
+      <p class="total-amount">$120/yr</p>
+    </div>
     
 </section>
   <!-- Section end -->

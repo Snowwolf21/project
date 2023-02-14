@@ -37,6 +37,7 @@ body {
  
 }
 
+
 .side-bar {
     width: 100%;
     height: 200px;
@@ -94,17 +95,15 @@ main {
 section {
    
    width:400px;
-   /* max-width: 420px; */
-   background: var(--White);
-   display: none;
-    position: absolute;
-    top: -16%;
-    left: 10%;
-    right: 10%;
-    
-    border-radius: 10px;
-    padding: 1.75rem;
-    box-shadow: inset;
+  background: var(--White);
+  position: absolute;
+ top: -16%;
+ left: 10%;
+ right: 10%; 
+ padding: 1.75rem;
+ border-radius: 10px;
+   
+    transform: translateX(-150%);
 }
 
 footer {
@@ -117,7 +116,7 @@ footer {
 }
 
 footer .btn {
-    padding: 0.75rem 0.75rem;
+    padding: 0.75rem 0.5rem;
     font-size: 1.125rem;
     font-weight: 600;
     text-transform: capitalize;
@@ -127,27 +126,74 @@ footer .btn {
     border-radius: 5px;
 }
 
-.step-1  {
-    display: block;
-}
-
-
-/* .step-1 form .form-title {
-        font-size: 2rem;
-        font-weight: 700;
-        line-height: 1.6;
-        color: var(--Marine-blue);
-}
-
-.step-1 form .title-info {
-    font-size: 1.25rem;
+/* Re-useable class */
+.step-title {
+    font-size: 1.75rem;
     font-weight: 600;
-   padding: 0.5rem 1rem 0.5rem 0;
-    line-height: 1.5;
-    letter-spacing: 0.5px;
-    color: var(--Cool-gray);
-} */
+    color: var(--Marine-blue);
+}
 
+ .step-info {
+    font-size: 1.25rem;
+    font-weight: 500;
+   padding:1rem 0.5rem ;
+   padding-left: 0;
+    line-height: 1.2;
+    color: var(--Cool-gray);
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: var(--Marine-blue);
+    line-height: 1.2;
+}
+
+.price {
+    font-size: 1.025rem;
+    font-weight: 500;
+    color: var(--Cool-gray);
+    letter-spacing: 1.2px;
+   display: none;
+}
+
+.text {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--Cool-gray);
+    line-height: 1.4;
+}
+
+.plan-container {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+     gap: 1rem;
+}
+
+ .plan-container article {
+
+    border: 1px solid var(--Light-gray);
+    border-radius: 10px;
+    padding: 0.55rem;
+}
+
+.plan-container article:hover {
+    background: var(--Alabaster);
+    border: 1.8px solid var( --Purplish-blue);
+    cursor: pointer;
+}
+
+/* End of Re-useable class */
+
+
+/* Step 1 */
+
+.step-1 {
+    /* transform: translateX(0); */
+}
 .step-1 form .input-box {
     margin: 0.85rem 0;
 }
@@ -158,7 +204,6 @@ footer .btn {
     text-transform: capitalize;
     letter-spacing: 0.5px;
     line-height: 1.6;
-
     color: var( --Marine-blue);
 }
 .step-1 form .label-box {
@@ -182,45 +227,16 @@ footer .btn {
    color: var(--Cool-gray);
 }
 
+.step-1 form input:hover {
+    cursor: pointer;
+}
+
+
+
+/* Step 2 */
 .step-2 {
-    display: none;
-    /* width: 100%; */
-
+    /* transform: translateX(0); */
 }
-
- .step-title {
-    font-size: 1.8rem;
-    font-weight: 700;
-    line-height: 1.6;
-    color: var(--Marine-blue);
-}
-
- .step-info {
-    font-size: 1.2rem;
-    font-weight: 600;
-   padding: 0.5rem 1rem 0.5rem 0;
-    line-height: 1.5;
-    letter-spacing: 0.5px;
-    color: var(--Cool-gray);
-}
-
-.step-2 .plan-container {
-    border: 3px solid red;
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-  gap: 1rem;
-}
-
-.step-2 .plan-container article {
-
-    border: 1px solid var(--Light-gray);
-    /* padding: 1.125rem; */
-    border-radius: 10px;
-    padding: 0.5rem;
-}
-
 .step-2 .plan-container article .article-box {
     display: flex;
     align-items: flex-start;
@@ -235,35 +251,16 @@ footer .btn {
     line-height: 1.4;
 }
 
-.step-2 .plan-container article .article-info .article-title {
-    font-size: 1.175rem;
-    font-weight: 600;
-    text-transform: capitalize;
-    letter-spacing: 1.5px;
-    color: var(--Marine-blue);
-}
-
-.step-2 .plan-container article .article-info .monthly-price {
-    font-size: 1.05rem;
-    font-weight: 500;
-    color: var(--Cool-gray);
-    letter-spacing: 1.2px;
-   display: none;
-}
-
 .step-2 .plan-container article .article-info .yearly-price {
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--Light-gray);
     letter-spacing: 1.4px;
     display: flex;
-    flex-flow: column ;
-
-  
+    flex-flow: column ;  
 }
 
 .step-2 .plan-container article .article-info .yearly-price .duration {
-    /* display: block; */
     font-size: 1rem;
     font-weight: 600;
     color: var(--Marine-blue);
@@ -310,10 +307,71 @@ transition: all 100ms ease-in-out;
 }
 
 
+
+/* Step 3 */
 .step-3 {
-        display: none;
+    /* transform: translateX(0); */
 }
 
-.step-3 .step-title {
+.step-3 .plan-container {
 
+}
+.step-3 .plan-container .box {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0.75rem;
+ 
+}
+
+.step-3 .plan-container .box input {
+    flex-basis: 20px;
+    height: 20px;
+}
+
+.step-3 .plan-container .box input:hover {
+    cursor: pointer;
+}
+.step-3 .plan-container .box .box-info {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.step-3 .plan-container .box .box-info span .amount {
+    font-weight: 500;
+    text-decoration: none;
+   
+}
+.step-3 .plan-container .box .box-info span .amount.yearly {
+    display: none;
+}
+
+
+/* Step 4 */
+.step-4 {
+    transform: translateX(0);
+}
+
+.step-4 .finish-container {
+    border: 2px solid red;
+    background: var(--Alabaster);
+    padding: 0.5rem;
+}
+
+ .finish-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+.step-4 .finish-container .finish-box:nth-of-type(1) {
+    border-bottom: 2px solid var(--Light-gray);
+}
+
+ .box-title {
+    font-weight: 500;
+    color: var(--Cool-gray);
+    font-size: 1rem;
 }
