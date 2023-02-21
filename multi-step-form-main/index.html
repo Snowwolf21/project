@@ -27,8 +27,8 @@
       <ul class="step-list">
          <!-- Step list items -->
         <li class="step-list-item">
-          <div class="item">
-            <div class="item-id">
+          <div class="item ">
+            <div class="item-id active" data-id="step-1">
               <p class="item-number">1</p>
             </div>
             <div class="item-info">
@@ -43,7 +43,7 @@
         <!-- Step list items -->
         <li class="step-list-item">
           <div class="item">
-            <div class="item-id">
+            <div class="item-id " data-id="step-2">
               <p class="item-number">2</p>
             </div>
             <div class="item-info">
@@ -57,10 +57,10 @@
           <!-- Step list items -->
         <li class="step-list-item">
           <div class="item">
-            <div class="item-id">
+            <div class="item-id " data-id="step-3">
               <p class="item-number">3</p>
             </div>
-            <div class="item-info">
+            <div class="item-info ">
               <p class="step">step 3</p>
               <p class="info">add-ons</p>
             </div>
@@ -71,7 +71,7 @@
         <!-- Step list items -->
         <li class="step-list-item">
           <div class="item">
-            <div class="item-id">
+            <div class="item-id " data-id="step-4">
               <p class="item-number">4</p>
             </div>
             <div class="item-info">
@@ -87,9 +87,9 @@
       <!-- End of side bar -->
 
       <!-- main -->
-    <main class="content">
+    <main class="content-box">
           <!-- Section -->
-        <section class="content-box step-1">
+        <section class="content step-1 active" data-id="step-1">
              
                <!-- Form -->
               <form class="form ">
@@ -118,7 +118,7 @@
                 <div class="input-box">
                  <div class="label-box">
                   <p class="label" id="number">phone number</p>
-                  <p class="label required">This field is required</p>
+                  <p class="error">This field is required</p>
                  </div>
                     <input type="tel" placeholder="e.g. +1 234 567 890" name="number" id="number">
                 </div>
@@ -130,7 +130,7 @@
         <!-- End of Section-->
 
           <!-- Section -->
-        <section class="content-box step-2">
+        <section class="content step-2" data-id="step-2">
           <h1 class="step-title">Select your plan</h1>
           <p class="step-info">  You have the option of monthly or yearly billing.</p>
             <!-- Plan container -->
@@ -196,7 +196,7 @@
       <!-- Section end -->
 
        <!-- Section -->
-       <section class="content-box step-3">
+       <section class="content step-3" data-id="step-3">
         <h1 class="step-title">Pick add-ons</h1>
         <p class="step-info">  Add-ons help enhance your gaming experience</p>
           <!-- Select  Plan container -->
@@ -257,7 +257,7 @@
     <!-- Section end -->
 
      <!-- Section -->
-     <section class="content-box step-4">
+     <section class="content step-4" data-id="step-4">
       <h1 class="step-title">Finishing up</h1>
       <p class="step-info">  Double-check everything looks OK before confirming.</p>
         <!-- Select  Plan container -->
@@ -265,37 +265,37 @@
         <div class="finish-box">
           <div class="service">
             <p class="title">Arcade(Monthly)</p>
-            <a href="#" class="service-link">Change</a>
+            <a href="#" class="text">Change</a>
           </div>
-          <p class="amount monthly"> $9/mo </p>
-          <p class="amount yearly">$90/yr</p>
+          <p class="monthly amount title"> $9/mo </p>
+          <p class="yearly amount title">$90/yr</p>
         </div>
 
         <div class="finish-box">
-            <p class="box-title">Online service</p>
-            <p class="amount monthly"> +$1/mo</p>
-            <p class="amount yearly"> $10/yr</p>
+            <p class="text">Online service</p>
+            <p class="monthly amount cost"> +$1/mo</p>
+            <p class="yearly amount cost">+$10/yr</p>
       </div>
 
       <div class="finish-box">
-          <p class="box-title">Larger storage</p>
-          <p class="amount monthly">+$2/mo</p>
-          <p class="amount yearly">$20/yr</p>
+          <p class="text">Larger storage</p>
+          <p class="monthly amount cost">+$2/mo</p>
+          <p class="yearly amount cost">+$20/yr</p>
 
         </div>
 
        
     </div>
 
-    <div class="finish-box">
-      <p class="box-title">Total (per year)</p>
-      <p class="total-amount">$120/yr</p>
+    <div class="total-box">
+      <p class="total-text">Total (per year)</p>
+      <p class="total-price">$120/yr</p>
     </div>
     
 </section>
   <!-- Section end -->
-  <section class="content-box step-5">
-    <div class="content-container">
+  <section class="content step-5" data-id="step-5">
+    <div class="plan-container">
       <div class="img-bx">
         <img src="./assets/images/icon-thank-you.svg" alt="">
       </div>
@@ -310,15 +310,15 @@
     </main>
     <!-- main end -->
 
-    <footer>
+    <footer class="footer">
       
         <button class=" btn prev-btn">go back</button>
-        <button class=" btn next-btn">next step</button>
+        <button  type="submit" class=" btn next-btn">next step</button>
       
     </footer>
   </div>
 
-
+    <script  src="./app.js"></script>
 </body>
 </html>
 

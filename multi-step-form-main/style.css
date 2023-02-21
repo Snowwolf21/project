@@ -33,7 +33,7 @@ body {
     width:500px;
     /* max-width: 500px; */
     height: 100vh;
-    border: 5px solid gold;
+    /* border: 5px solid gold; */
  
 }
 
@@ -70,22 +70,33 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+}
+
+.side-bar .step-list .step-list-item .item .active {
+    background: var(--Light-blue);
+    border: none;
 }
 
 .side-bar .step-list .step-list-item .item .item-id .item-number {
    font-size: 1.25rem;
-   font-weight: medium;
+   font-weight: 600;
    color: var(--White);
    
 }
+
+.side-bar .step-list .step-list-item .item .active .item-number {
+    color: var(--Marine-blue);
+}
+
 
 .side-bar .step-list .step-list-item .item .item-info {
     display: none;
 }
  
 main {
-    border: 3px solid red;
-    background-color: aqua;
+   
+    background:var(--Magnolia);
     width: 100%;
     height: 65vh;
     position: relative;
@@ -94,11 +105,11 @@ main {
 
 section {
    
-   width:400px;
+   width:420px;
   background: var(--White);
   position: absolute;
  top: -16%;
- left: 10%;
+ left: 7%;
  right: 10%; 
  padding: 1.75rem;
  border-radius: 10px;
@@ -126,7 +137,7 @@ footer .btn {
     border-radius: 5px;
 }
 
-/* Re-useable class */
+/*  Generic (re-useable) class */
 .step-title {
     font-size: 1.75rem;
     font-weight: 600;
@@ -144,10 +155,11 @@ footer .btn {
 
 .title {
     font-size: 1.1rem;
-    font-weight: 600;
-    text-transform: capitalize;
+    font-weight: 700;
+    /* text-transform: capitalize; */
     color: var(--Marine-blue);
     line-height: 1.2;
+    letter-spacing: 1px;
 }
 
 .price {
@@ -159,7 +171,7 @@ footer .btn {
 }
 
 .text {
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 500;
     color: var(--Cool-gray);
     line-height: 1.4;
@@ -186,6 +198,10 @@ footer .btn {
     cursor: pointer;
 }
 
+.active {
+    transform: translateX(0);
+}
+
 /* End of Re-useable class */
 
 
@@ -199,12 +215,12 @@ footer .btn {
 }
 
 .step-1 form .label {
-    font-size: 1.1rem;
+    font-size: 1.125rem;
     font-weight: 600;
     text-transform: capitalize;
     letter-spacing: 0.5px;
     line-height: 1.6;
-    color: var( --Marine-blue);
+    color: var(--Marine-blue);
 }
 .step-1 form .label-box {
     display: flex;
@@ -309,6 +325,7 @@ transition: all 100ms ease-in-out;
 
 
 /* Step 3 */
+
 .step-3 {
     /* transform: translateX(0); */
 }
@@ -350,17 +367,20 @@ transition: all 100ms ease-in-out;
 
 
 /* Step 4 */
+
+
 .step-4 {
-    transform: translateX(0);
+    /* transform: translateX(0); */
 }
 
 .step-4 .finish-container {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     background: var(--Alabaster);
-    padding: 0.5rem;
+    padding: 0.75rem;
+    border-radius: 10px;
 }
 
- .finish-box {
+.step-4 .finish-container .finish-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -370,8 +390,68 @@ transition: all 100ms ease-in-out;
     border-bottom: 2px solid var(--Light-gray);
 }
 
- .box-title {
-    font-weight: 500;
-    color: var(--Cool-gray);
+.step-4 .finish-container .finish-box .cost {
     font-size: 1rem;
+    font-weight: 600;
+    color: var(--Marine-blue);
+}
+
+.step-4 .total-box {
+    height: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+        padding: 0 0.75rem;
+}
+
+.step-4 .total-box .total-text {
+font-size: 1.1rem;
+font-weight: 600;
+letter-spacing: 1px;
+color: var(--Cool-gray);
+}
+
+.step-4 .total-box .total-price {
+    font-size: 1.125em;
+    font-weight: 700;
+    color: var(  --Purplish-blue);
+}
+
+.step-5 {
+    /* transform: translateX(0); */
+    /* padding: 2rem 1.2rem; */
+}
+
+.step-5 .plan-container {
+    padding:2.5rem 0;
+}
+
+.img-bx {
+    align-self: center;
+    width: 60px;
+    height: 60px;
+
+}
+
+.img-bx img {
+    width: 100%;
+    height: 100%;
+}
+
+
+.thanks-title {
+    align-self: center;
+    font-size: 1.65rem;
+    font-weight: 700;
+}
+
+.thanks-text {
+align-self:center;
+font-size: 1.18rem;
+font-weight: 500;
+text-align: center;
+letter-spacing: 0.75px;
+line-height: 1.6;
+color: var(--Cool-gray);
 }
