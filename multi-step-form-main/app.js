@@ -5,25 +5,27 @@
     const sectionBox = contentBox.querySelectorAll(".content");
      const btns = footer.querySelectorAll(".btn")
     const form = document.querySelector(".form");
-    let count = 0;
+
     let  itemArrayBox= [];
     let contentArrayBox = [];
 
     // Array generator function
-//  function arrayFilter (arrayTest,arrayBox,condition) {
-//     arrayTest.forEach((item) => {
-//         const category = item.dataset.id.includes(condition)
-//         if (category) {
-//          arrayBox.push(item.dataset.id)
-//         } 
-//     }) 
+ function arrayFilter (arrayTest,arrayBox,condition) {
+    arrayTest.forEach((item) => {
+        const category = item.dataset.id.includes(condition)
+        if (category) {
+         arrayBox.push(item.dataset.id)
+        } 
+    }) 
    
-//  }
-
-//  arrayFilter(itemBox,itemArrayBox,"step-")
-//  arrayFilter(sectionBox,contentArrayBox,"step-")
+ }
 
 
+ arrayFilter(itemBox,itemArrayBox,"step-")
+ arrayFilter(sectionBox,contentArrayBox,"step-")
+
+
+ 
 //     btns.forEach((btn) => {
 //         btn.addEventListener("click", (e) => {
 //             const key = e.currentTarget.classList;
@@ -116,19 +118,47 @@
 
       
                              
-                        
+let count = 0         
                      
             for (const btn of btns) {
                 btn.addEventListener("click", (e) => {
-                    if (e.currentTarget.classList.contains("prev-btn")) {
-                      count--
+                  
+                    if(e.currentTarget.classList.contains("next-btn"))  {
+                        if ( count < contentArrayBox.length) {
+                         
+                            if (contentArrayBox[count] !== itemArrayBox[count]) {
+                                console.log(count)
+                            
+                            } 
+                            else if (contentArrayBox[count] === itemArrayBox[count]) {
+                                console.log(count)
+                
+                            }
+                            count++ 
+                        }
+                     
                    
-                    } else {
-                       count++
-                       console.log(sectionBox)
+                    } else if (e.currentTarget.classList.contains("prev-btn")) {
+                       
+                        if (count > itemArrayBox.length) {
+                            count = contentArrayBox.length - 1   
+                        }  
+                        
+                        count--
+                      
+                        if (count < 0) {
+                            count = 0
+                        }  
+                        if (contentArrayBox[count] === itemArrayBox[count]) {
+                            console.log(count)
+            
+                        }
+
+                        // console.log(count)
                     }
                 })
             }
 
 
-          
+
+
