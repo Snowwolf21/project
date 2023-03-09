@@ -126,13 +126,14 @@ let count = 0
                     if(e.currentTarget.classList.contains("next-btn"))  {
                         if ( count < contentArrayBox.length) {
                          
-                            if (contentArrayBox[count] !== itemArrayBox[count]) {
+                            // if (contentArrayBox[count] !== itemArrayBox[count]) {
+                            //     console.log(count)
+                            //     displayItem(count,sectionBox)
+                            // } 
+                             if (contentArrayBox[count] === itemArrayBox[count]) {
                                 console.log(count)
-                            
-                            } 
-                            else if (contentArrayBox[count] === itemArrayBox[count]) {
-                                console.log(count)
-                
+                                displayItem(count,sectionBox)
+                                
                             }
                             count++ 
                         }
@@ -140,8 +141,8 @@ let count = 0
                    
                     } else if (e.currentTarget.classList.contains("prev-btn")) {
                        
-                        if (count > itemArrayBox.length) {
-                            count = contentArrayBox.length - 1   
+                        if (count > sectionArrayBox.length) {
+                            count = itemArrayBox.length - 1   
                         }  
                         
                         count--
@@ -151,10 +152,10 @@ let count = 0
                         }  
                         if (contentArrayBox[count] === itemArrayBox[count]) {
                             console.log(count)
-            
+                            displayItem(count,sectionBox)
                         }
 
-                        // console.log(count)
+                     
                     }
                 })
             }
@@ -162,3 +163,68 @@ let count = 0
 
 
 
+ function displayItem(count,sectionBox) {
+    for (const section of sectionBox) {
+        if (count === 0 ) {
+             if (section.dataset.id === "step-1") {
+               if(!section.classList.contains("active")) {
+                section.classList.add("active")
+               } else {
+                section.classList.remove("active")
+               }
+             }
+             if (section.dataset.id === "step-2") {
+                if(!section.classList.contains("active")) {
+                 section.classList.add("active")
+                } else {
+                 section.classList.remove("active")
+                }
+              }
+        }
+       else if (count === 1 ) {
+        if (section.dataset.id === "step-2") {
+            if(section.classList.contains("active")) {
+             section.classList.remove("active")
+            } else {
+                section.classList.add("active")
+            }
+          }
+          if (section.dataset.id === "step-3") {
+             if(!section.classList.contains("active")) {
+              section.classList.add("active")
+             } else {
+              section.classList.remove("active")
+             }
+           }
+        }
+      else  if (count === 2 ) {
+        if (section.dataset.id === "step-3") {
+            if(section.classList.contains("active")) {
+             section.classList.remove("active")
+            } else {
+                section.classList.add("active")
+            }
+          }
+          if (section.dataset.id === "step-4") {
+             if(!section.classList.contains("active")) {
+              section.classList.add("active")
+             } else {
+              section.classList.remove("active")
+             }
+           }
+        }
+        else if (count === 3) {
+            if (section.dataset.id === "step-4") {
+                if(section.classList.contains("active")) {
+                 section.classList.remove("active")
+                } else {
+                    section.classList.add("active")
+                }
+              }
+              if (section.dataset.id === "step-5") {
+                section.classList.add("active")
+                 
+               }
+        }
+    }
+ }
