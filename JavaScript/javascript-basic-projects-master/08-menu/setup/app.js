@@ -71,4 +71,74 @@ const menu = [
     img: "./images/item-9.jpeg",
     desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
   },
+  {
+    id: 10,
+    title: "stake dinner",
+    category: "dinner",
+    price: 39.99,
+    img: "./images/item-10.jpeg",
+    desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+  },
 ];
+
+const sectionCenter = document.querySelector(".section-center")
+const container = document.querySelector(".btn-container")
+
+
+      window.addEventListener("DOMContentLoaded", () => {
+        displayMenu(menu)
+        displayMenuBtn()
+      })
+
+
+function displayMenu (menuItems) {
+  let displaymenu = menuItems.map((item) => {
+    return `<article class="menu-item">
+    <img src=${item.img}  class="photo" alt=${item.title}>
+    <div class="item-info">
+    <header>
+      <h4>${item.title}</h4>
+      <h4 class="price">$${item.price}</h4>
+    </header>
+      <p class="item-text">${item.desc}</p>
+    </div>
+  </article>`
+  });
+  displaymenu = displaymenu.join("")
+  sectionCenter.innerHTML = displaymenu
+}
+  
+
+    const displayMenuBtn = () => {
+                const categories = menu.reduce((values,item) => {
+                  if(!values.includes(item.category)) {
+                    values.push(item.category)
+                  }
+                  return values
+              },["all"])
+              const btnContainer = categories.map((category) => {
+              return `<button class="filter-btn" type="button" data-id=${category}>
+              ${category}
+              </button>`
+              }).join("")
+              container.innerHTML = btnContainer;
+              const btns = document.querySelectorAll(".filter-btn");
+              btns.forEach((btn) => {
+              btn.addEventListener("click", (e) => {
+              const category = e.currentTarget.dataset.id;
+              const menuCategory = menu.filter((item) => {
+                  if (item.category === category) {
+                    return item
+                  }
+              })
+                if (category === "all") {
+                  displayMenu(menu)
+                } else {
+                  displayMenu(menuCategory)
+                }
+                 })
+              })
+       }
+
+
+
