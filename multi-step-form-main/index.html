@@ -98,7 +98,8 @@
                 <!-- input box -->
                 <div class="input-box">
                 <div class="label-box">
-                  <p class="label" id="name">name</p>
+                  <p class="label" class="name">name</p>
+                  <p class="error"></p>
                 </div>
                     <input type="text" placeholder="e.g. Stephen King" name = "name" id="name">
                 </div>
@@ -108,7 +109,8 @@
                  <!-- input box -->
                 <div class="input-box">
                  <div class="label-box">
-                  <p class="label"  id="email">email address</p>
+                  <p class="label"  class="email">email address</p>
+                  <p class="error"></p>
                  </div>
                     <input type="email" placeholder="e.g. stephenking@lorem.com" name="email" id="email">
                 </div>
@@ -117,8 +119,8 @@
                  <!-- input box -->
                 <div class="input-box">
                  <div class="label-box">
-                  <p class="label" id="number">phone number</p>
-                  <p class="error">This field is required</p>
+                  <p class="label" class="number" maxlength = "12">phone number</p>
+                  <p class="error"></p>
                  </div>
                     <input type="tel" placeholder="e.g. +1 234 567 890" name="number" id="number">
                 </div>
@@ -319,6 +321,7 @@
   </div>
 
     <script  src="./app.js"></script>
+    <!-- <script src="./index.js"></script> -->
 </body>
 </html>
 

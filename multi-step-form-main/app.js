@@ -5,6 +5,7 @@
     const sectionBox = contentBox.querySelectorAll(".content");
      const btns = footer.querySelectorAll(".btn")
     const form = document.querySelector(".form");
+    const errors = document.querySelectorAll(".error");
     let isAlive = true
     let  itemArrayBox= [];
     let contentArrayBox = [];
@@ -27,11 +28,26 @@
 
  
 
+const inputs = form.querySelectorAll("input")
+    function validator() {
+        for (const input of inputs) {
+            if (input.id === "name" && input.value === ""
+               || input.id === "email" && input.value === ""
+               || input.id === "number" && input.value === "") {
+             
+                errors.textContent = "This field is required";
 
-                      
-                        
-                
-                           
+               count = false
+               } 
+               else {
+               
+                displayItem(count,sectionBox)
+                displayItem(count,itemBox)
+                count = true
+               }
+           }
+    }
+         
           
 
       
@@ -43,15 +59,11 @@ let count = 0
                   
                     if(e.currentTarget.classList.contains("next-btn"))  {
                         if ( count < itemArrayBox.length) {
-                         
-                            // if (contentArrayBox[count] !== itemArrayBox[count]) {
-                            //     console.log(count)
-                            //     displayItem(count,sectionBox)
-                            // } 
                              if (contentArrayBox[count] === itemArrayBox[count]) {
                                 console.log(count)
-                                displayItem(count,sectionBox)
-                                displayItem(count,itemBox)
+                              
+                             validator()
+                                
                             }
                             count++ 
                         }
@@ -72,6 +84,7 @@ let count = 0
                         if (contentArrayBox[count] === itemArrayBox[count]) {
                             console.log(count)
                             displayItem(count,sectionBox)
+                               displayItem(count,itemBox)
                         }
 
                      
@@ -88,18 +101,21 @@ let count = 0
         const classId = item.classList
         if (count === 0 ) {
              if (dataId === "step-1") {
-                if (classId.contains("active")) {
-                    classId.remove("active")
-                } else if (!classId.contains("active")) {
+               
+                if (!classId.contains("active")) {
                     classId.add("active")
+                } else if (classId.contains("active")) {
+                    classId.remove("active")
                 }
+              
+              
              }
              if (dataId === "step-2") {
                 if (!classId.contains("active")) {
                       classId.add("active")
                     }
                 else if (classId.contains("active")) {
-                    classId.remove("active")
+                    classId.remove("active") 
                 }
             
               }
@@ -108,7 +124,8 @@ let count = 0
         if (dataId === "step-2") {
             if (classId.contains("active")) {
                 classId.remove("active")
-            } else if (!classId.contains("active")) {
+            } 
+            else if (!classId.contains("active")) {
                 classId.add("active")
             }
           }
@@ -137,13 +154,6 @@ let count = 0
            }
         }
         else if (count === 3) {
-            if (dataId === "step-4") {
-                if (classId.contains("active")) {
-                    classId.remove("active")
-                } else if (!classId.contains("active")) {
-                    classId.add("active")
-                }
-              }
               if (dataId === "step-5") {
                 if (classId.contains("active")) {
                     classId.remove("active")
@@ -154,3 +164,7 @@ let count = 0
         }
     }
  }
+
+
+
+
