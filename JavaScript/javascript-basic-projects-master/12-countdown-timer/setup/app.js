@@ -21,3 +21,8 @@ const weekdays = [
   "Friday",
   "Saturday",
 ];
+
+
+const giveAway = document.querySelector('.giveaway')
+const deadLine = document.querySelector('.deadline');
+const item = document.querySelectorAll('.deadline-format h4')

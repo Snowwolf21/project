@@ -7,49 +7,22 @@
     const form = document.querySelector(".form");
     const errors = document.querySelectorAll(".error");
     let isAlive = true
-    let  itemArrayBox= [];
-    let contentArrayBox = [];
-
+    const  itemArrayBox= Array.from(itemBox);
+    const contentArrayBox = Array.from(sectionBox);
+    console.log(itemArrayBox);
+    console.log(contentArrayBox);
     // Array generator function
- function arrayFilter (arrayTest,arrayBox,condition) {
-    arrayTest.forEach((item) => {
-        const category = item.dataset.id.includes(condition)
-        if (category) {
-         arrayBox.push(item.dataset.id)
-        } 
-    }) 
-   
- }
 
-
- arrayFilter(itemBox,itemArrayBox,"step-")
- arrayFilter(sectionBox,contentArrayBox,"step-")
 
 
  
 
-const inputs = form.querySelectorAll("input")
-    function validator() {
-        for (const input of inputs) {
-            if (input.id === "name" && input.value === ""
-               || input.id === "email" && input.value === ""
-               || input.id === "number" && input.value === "") {
-             
-                errors.textContent = "This field is required";
 
-               count = false
-               } 
-               else {
-               
-                displayItem(count,sectionBox)
-                displayItem(count,itemBox)
-                count = true
-               }
-           }
-    }
          
           
-
+//  select the form 
+// if the input value is empty return break
+// if the input value is is not empty and it equals name email or phone number contitnue
       
                              
 let count = 0         
@@ -61,22 +34,25 @@ let count = 0
                         if ( count < itemArrayBox.length) {
                              if (contentArrayBox[count] === itemArrayBox[count]) {
                                 console.log(count)
-                              
-                             validator()
                                 
+                                displayItem(count,sectionBox)
+                                displayItem(count,itemBox)
+                                
+                                
+
+
+
+                                   
                             }
                             count++ 
                         }
-                     
-                   
-                    } else if (e.currentTarget.classList.contains("prev-btn")) {
-                       
+                    } 
+                    else if (e.currentTarget.classList.contains("prev-btn")) {
+   
                         if (count > itemArrayBox.length) {
                             count = itemArrayBox.length - 1   
-                        }  
-                        
+                        }     
                         count--
-                      
                         if (count < 0) {
                             count = 0
                             return false
@@ -84,7 +60,7 @@ let count = 0
                         if (contentArrayBox[count] === itemArrayBox[count]) {
                             console.log(count)
                             displayItem(count,sectionBox)
-                               displayItem(count,itemBox)
+                            displayItem(count,itemBox)
                         }
 
                      
@@ -103,62 +79,64 @@ let count = 0
              if (dataId === "step-1") {
                
                 if (!classId.contains("active")) {
-                    classId.add("active")
-                } else if (classId.contains("active")) {
-                    classId.remove("active")
+                    classId.toggle("active")
                 }
-              
-              
+                else {
+                    classId.toggle("active")
+                }
              }
              if (dataId === "step-2") {
                 if (!classId.contains("active")) {
-                      classId.add("active")
+                    classId.toggle("active")
                     }
-                else if (classId.contains("active")) {
-                    classId.remove("active") 
-                }
-            
+                else {
+                    classId.toggle("active")
+                }  
               }
         }
        else if (count === 1 ) {
         if (dataId === "step-2") {
             if (classId.contains("active")) {
-                classId.remove("active")
+                classId.toggle("active")
             } 
-            else if (!classId.contains("active")) {
-                classId.add("active")
+            else {
+                classId.toggle("active")
             }
           }
           if (dataId === "step-3") {
             if (classId.contains("active")) {
-                classId.remove("active")
-            } else if (!classId.contains("active")) {
-                classId.add("active")
+                classId.toggle("active")
+            }
+            else {
+                classId.toggle("active")
             }
            }
         }
       else  if (count === 2 ) {
         if (dataId === "step-3") {
             if (classId.contains("active")) {
-                classId.remove("active")
-            } else if (!classId.contains("active")) {
-                classId.add("active")
+                classId.toggle("active")
+            } 
+            else {
+                classId.toggle("active")
             }
           }
           if (dataId === "step-4") {
             if (classId.contains("active")) {
-                classId.remove("active")
-            } else if (!classId.contains("active")) {
-                classId.add("active")
+                classId.toggle("active")
+            } 
+            else {
+                classId.toggle("active")
             }
            }
         }
         else if (count === 3) {
               if (dataId === "step-5") {
                 if (classId.contains("active")) {
-                    classId.remove("active")
-                } else if (!classId.contains("active")) {
-                    classId.add("active")
+                    classId.toggle("active")
+                }
+                else {
+                    classId.toggle("active")
                 }
                }
         }
