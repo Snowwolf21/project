@@ -98,8 +98,8 @@
                 <!-- input box -->
                 <div class="input-box">
                 <div class="label-box">
-                  <p class="label" class="name">name</p>
-                  <p class="error"></p>
+                  <label class="label" class="name">name</label>
+                  <p class="error hidden">This field is required</p>
                 </div>
                     <input type="text" placeholder="e.g. Stephen King" name = "name" id="name">
                 </div>
@@ -109,8 +109,8 @@
                  <!-- input box -->
                 <div class="input-box">
                  <div class="label-box">
-                  <p class="label"  class="email">email address</p>
-                  <p class="error"></p>
+                  <label class="label"  class="email">email address</label>
+                  <p class="error hidden">This field is required</p>
                  </div>
                     <input type="email" placeholder="e.g. stephenking@lorem.com" name="email" id="email">
                 </div>
@@ -120,7 +120,7 @@
                 <div class="input-box">
                  <div class="label-box">
                   <p class="label" class="number" >phone number</p>
-                  <p class="error"></p>
+                  <p class="error hidden">This field is required</p>
                  </div>
                     <input type="tel" placeholder="e.g. +1-234-567-890" name="number" id="number" maxlength="14">
                 </div>
@@ -143,11 +143,12 @@
                 <img src="./assets/images/icon-arcade.svg" alt="article logo">
                 <div class="article-info">
                   <p class="title">arcade</p>
-                  <p class="price">$9/mo</p>
-                   <p class="yearly-price">
+                  <p class="price" data-id="9">$9/mo  </p>
+                  <span class="duration hidden">2 months free</span>
+                   <!-- <p class="price year" data-id="90">
                     $90/yr
-                        <span class="duration">2 months free</span>
-                   </p>
+                       
+                   </p> -->
                 </div>
               </div>
             </article>
@@ -159,10 +160,11 @@
                 <img src="./assets/images/icon-advanced.svg" alt="">
                 <div class="article-info">
                   <p class="title">advance</p>
-                  <p class="price">$12/mo</p>
-                 <p class="yearly-price">$120/yr
+                  <p class="price" data-id="12"> $12/mo  </p>
+                  <span class="duration hidden">2 months free</span>
+                 <!-- <p class="price year" data-id="120">$120/yr
                    <span class="duration">2 months free</span>
-                 </p>    
+                 </p>     -->
                 </div>
               </div>
             </article>
@@ -174,16 +176,16 @@
                 <img src="./assets/images/icon-pro.svg" alt="">
                 <div class="article-info">
                     <p class="title">pro</p>
-                    <p class="price">$15/mo</p>
-                    <p class="yearly-price">$150/yr
+                    <p class="price" data-id="15">$15/mo</p>
+                    <span class="durationc hidden">2 months free</span>
+                    <!-- <p class="price year" data-id="150">$150/yr
                           <span class="duration">2 months free</span>
-                  </p>    
+                  </p>     -->
                 </div>
               </div>
             </article>
              <!-- End of article -->
-          </div>
-          <!-- subscription -->
+               <!-- subscription -->
 
           <div class="subscription">
             <p class="plan">monthly</p>
@@ -193,6 +195,8 @@
             <p class="plan">yearly</p>
           </div>
          <!-- subscription end -->
+          </div>
+        
         
     </section>
       <!-- Section end -->
@@ -205,7 +209,7 @@
         <div class="plan-container">
           <!-- Box -->
         <article class="box">
-          <input type="checkbox" checked >
+          <input type="checkbox"  >
           <div class="box-info">
            <span>
             <p class="title">Online service</p>
@@ -314,8 +318,9 @@
 
     <footer class="footer">
       
-        <button class=" btn prev-btn">go back</button>
-        <button  type="" class=" btn next-btn">next step</button>
+        <button type="button" class="btn prev-btn hidden">go back</button>
+        <button  type="button" class=" btn next-btn">next step</button>
+        <button type="submit" class="btn submit-btn hidden">Confirm</button>
       
     </footer>
   </div>

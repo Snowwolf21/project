@@ -104,38 +104,51 @@ main {
 }
 
 section {
-   
-   width:420px;
-  background: var(--White);
-  position: absolute;
- top: -16%;
- left: 7%;
- right: 10%; 
- padding: 1.75rem;
- border-radius: 10px;
-   
+    width:420px;
+    background: var(--White);
+    position: absolute;
+    top: -16%;
+    left: 7%;
+    right: 10%; 
+    padding: 1.75rem;
+    border-radius: 10px;
     transform: translateX(-150%);
 }
 
-footer {
+ footer {
     width: 100%;
     height: 80px;
-    padding:0 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+   background: var( --White);
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding: 0.75rem;
+   box-shadow: 9px -7px 2px -19px rgba(0,0,0,0.68);
+  
+ }
+    footer .btn {
+        /* width: 100px; */
+          padding: 0.65rem;
+          font-size: 1.125rem;
+          font-weight: 700;
+          text-transform: capitalize; 
+          border-radius: 5px;
+          border: none;
+        color: var(--White); 
 
-footer .btn {
-    padding: 0.75rem 0.5rem;
-    font-size: 1.125rem;
-    font-weight: 600;
-    text-transform: capitalize;
-    border: none;
-    color: var(--White);
-    background: var( --Marine-blue);
-    border-radius: 5px;
-}
+    }
+    footer .prev-btn {
+        margin-right: auto;
+        background-color: var(--Alabaster);
+        color: var(--Cool-gray);
+    }
+    footer .next-btn, footer .submit-btn {
+        margin-left: auto;
+        background-color: var(--Marine-blue);
+    }
+    
+   
+
 
 /*  Generic (re-useable) class */
 .step-title {
@@ -167,7 +180,8 @@ footer .btn {
     font-weight: 500;
     color: var(--Cool-gray);
     letter-spacing: 1.2px;
-   display: none;
+    
+  
 }
 
 .text {
@@ -192,16 +206,27 @@ footer .btn {
     padding: 0.55rem;
 }
 
-.plan-container article:hover {
+.plan-container article:hover,
+.plan-container article.active
+ {
     background: var(--Alabaster);
     border: 1.8px solid var( --Purplish-blue);
     cursor: pointer;
+}
+
+
+
+.error {
+    color: red;
 }
 
 .active {
     transform: translateX(0);
 }
 
+.hidden {
+    display: none;
+}
 /* End of Re-useable class */
 
 
@@ -237,7 +262,7 @@ footer .btn {
 }
 
 .step-1 form  input::placeholder {
-   font-size: 1.12rem;
+   font-size: 1.125rem;
    font-weight: 600;
    letter-spacing: 1px;
    color: var(--Cool-gray);
@@ -247,7 +272,9 @@ footer .btn {
     cursor: pointer;
 }
 
-
+.step-1 form input:is(:focus, :valid) {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
 
 /* Step 2 */
 .step-2 {
@@ -267,21 +294,27 @@ footer .btn {
     line-height: 1.4;
 }
 
-.step-2 .plan-container article .article-info .yearly-price {
+.step-2 .plan-container article .article-info .year {
+    display: flex;
+    flex-flow: column ; 
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--Light-gray);
     letter-spacing: 1.4px;
-    display: flex;
-    flex-flow: column ;  
+    
+   
 }
 
-.step-2 .plan-container article .article-info .yearly-price .duration {
+.step-2 .plan-container article .article-info  .duration {
     font-size: 1rem;
     font-weight: 600;
     color: var(--Marine-blue);
+    display: block;
 }
+.step-2 .plan-container article .article-info  .duration.hidden {
 
+    display: none;
+}
  .step-2 .subscription {
     display: flex;
     justify-content:center;
@@ -318,7 +351,7 @@ transform: translateX(0);
 transition: all 100ms ease-in-out;
 }
 .step-2 .subscription .toggle-box .active {
-    transform: translateX(30px);
+    transform: translateX(34px);
     transition: all 100ms ease-in-out;
 }
 
