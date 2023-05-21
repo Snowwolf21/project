@@ -11,9 +11,15 @@
     const selectPlanPrice = document.querySelector('.step-2');
     const planContainer = selectPlanPrice.querySelector('.plan-container');
     const articles = Array.from(planContainer.querySelectorAll('article'));
-    const btn = planContainer.querySelector('.toggle-btn');
+    const toggleBtn = planContainer.querySelector('.toggle-btn');
     let currentStep = 0;
-   
+    const addOns = document.querySelector('.step-3');
+    const priced = document.querySelectorAll('.price');
+    const addOnsPlans = addOns.querySelectorAll('.amount');
+    const monthlyPrice = [9,12,15];
+    const yearlyPrice = [90,120,150];
+          const monthlyAddOn = [1,2,2];
+        const yearlyAddOn = [10,20,20]
     // previous btn
     prevBtn.addEventListener('click', (e) => {
         e.preventDefault()
@@ -23,60 +29,91 @@
     })
     // next btn
          nextBtn.addEventListener('click', (e) => {
-            e.preventDefault()
-            
+            e.preventDefault()  
            if(formValidation()) {
             currentStep++;
             displaySection(currentStep)
            }
-       
-
     })
         // confirm btn
              confirmBtn.addEventListener('click', (e) => {
                 e.preventDefault()
                 currentStep++
-              
                 displaySection(currentStep)
-         
              })
     
    
-       // Selecting Plan
-        for (let i = 0; i < articles.length; i++) {
-            const planCard = articles[i];
-        
-            planCard.addEventListener('click', (e) => {
-                const target = e.currentTarget
-              if (planCard[i] !== target) {
-                target.classList.remove('active')
-              }
-              else {
-                target.classList.add('active')
-              }     
+
+             
+      articles.forEach((article) => {
+        const btn = article.querySelector('.article-box');
+        const parent = btn.parentElement
+        // const price = btn.querySelector('.price')
+            btn.addEventListener('click', () => {
+               articles.forEach((item) => {
+                if (item !== article) {
+                    item.classList.remove('active')
+                   
+                }
+               })
+               parent.classList.toggle('active') 
+            // console.log(articles.indexOf(article))
+            // console.log(monthlyPrice[articles.indexOf(article)])
+             selectPrice(toggleBtn,article)
+             console.log(selectPrice())
             })
-            
-        }
-      
-     
-            btn.addEventListener('click', (e) => {
+      })
+        // Selecting price from the catalogue and also if for monthly or yearly 
+      const selectPrice= (toggleBtn,article) => {
+         const isToggled =  toggleBtn.classList.contains('active')
+         let selectedPrice ;
+                  if (isToggled) {
+                // console.log("Hello")
+                 selectedPrice = yearlyPrice[articles.indexOf(article)]
+                  console.log(selectedPrice)
+               }
+                else {
+                // console.log('Yipee!')
+                     selectedPrice =  monthlyPrice[articles.indexOf(article)]
+                console.log(selectedPrice)
+                    // monthlyPrice[articles.indexOf(article)]
+               }
+               return selectedPrice
+              
+      }
+
+       function selection() {
+                  
+                }
+         toggleBtn.addEventListener('click', (e) => {
                 const button = e.target.classList;
                      if(button.contains('active')) {
-                         button.remove('active');    
+                         button.remove('active'); 
+                        displayPrice(monthlyPrice,monthlyAddOn)                     
                      }
                      else {
                          button.add('active')   
+                        displayPrice(yearlyPrice,yearlyAddOn)   
                      }  
-                    priceSwitch(button) 
+                    // AddOnSwitch(button) 
                     duration()
                  })  
-        
+
+
+             //    display the monthly or yearly price when the toggle btn click
+              function displayPrice (moPrice,moAddOn) {
+                    for (let i =0; i < moPrice.length; i++) {
+                        priced[i].innerHTML = `$${moPrice[i]}/mo`
+                        addOnsPlans[i].innerHTML = `$${moAddOn[i]}/mo` 
+                 } 
+                 }
+        // duration function
                  function duration() {
                         const duration = document.querySelectorAll('.duration')
                         for (let i = 0; i < duration.length; i++) {
                             const element = duration[i];
                            if (!element.classList.contains('hidden')) {
-                            element.classList.add('hidden')
+                            element.classList.add('hidden');
                            }
                            else {
                             element.classList.remove('hidden')
@@ -87,23 +124,25 @@
 
 
         // price switcher()
-       function priceSwitch (button) {
-        const monthlyPrice = [9,12,15];
-        const yearlyPrice = [90,120,150];
-        const priced = document.querySelectorAll('.price')
-        if (button.contains('active')) {
-            priced[0].innerHTML = `$${yearlyPrice[0]}/yr`
-            priced[1].innerHTML = `$${yearlyPrice[1]}/yr`
-            priced[2].innerHTML = `$${yearlyPrice[2]}/yr`
-            // setTime(true)
-        }
-        else {
-            priced[0].innerHTML = `$${monthlyPrice[0]}/mo`
-            priced[1].innerHTML = `$${monthlyPrice[1]}/mo`
-            priced[2].innerHTML = `$${monthlyPrice[2]}/mo`
-            // setTime(false)
-        }
-       }
+    //    function AddOnSwitch (button) {
+    //     const monthlyAddOn = [1,2];
+    //     const yearlyAddOn = [10,20]
+    //     const priced = document.querySelectorAll('.price')
+    //     if (button.contains('active')) {
+    //         addOnsPlans[0].innerHTML = `$${yearlyAddOn[0]}/mo`
+    //         addOnsPlans[1].innerHTML = `$${yearlyAddOn[1]}/mo`
+    //         addOnsPlans[2].innerHTML = `$${yearlyAddOn[1]}/mo` 
+    //         // setTime(true)
+    //         }
+    //     else {
+    //         addOnsPlans[0].innerHTML = `$${monthlyAddOn[0]}/mo`
+    //         addOnsPlans[1].innerHTML = `$${monthlyAddOn[1]}/mo`
+    //         addOnsPlans[2].innerHTML = `$${monthlyAddOn[1]}/mo` 
+    //         // setTime(false)
+    //     }
+    //    }
+                
+       //form alidation function
      function formValidation () {
         const inputs = Array.from(form.querySelectorAll('input'));
        let valid = true;
@@ -121,7 +160,7 @@
       return valid
      }
 
-
+    //  Input  success validation
     function onSuccess(input) {
         let parent = input.parentElement
         let message = parent.querySelector('.error');
@@ -129,7 +168,7 @@
        
     }
                
-                   
+                // input error validation    
 function onError(input) {
     let parent = input.parentElement
     let message = parent.querySelector('.error');
@@ -202,8 +241,7 @@ function onError(input) {
                         currentElement.classList.remove('active')
                         nextElement.classList.add('active');
                        
-                    }
-                    
+                    }  
             }
             displayProgress(currentStep) 
             displayBtn(currentStep) 

@@ -205,9 +205,10 @@ section {
     border-radius: 10px;
     padding: 0.55rem;
 }
-
-.plan-container article:hover,
-.plan-container article.active
+.plan-container .active {
+    border: 1.8px solid var( --Purplish-blue);
+}
+.plan-container article:hover
  {
     background: var(--Alabaster);
     border: 1.8px solid var( --Purplish-blue);
